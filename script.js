@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initFloatingElements();
 });
 
+// Add a configurable form endpoint (replace with your Formspree endpoint)
+const FORM_ENDPOINT = 'https://formspree.io/f/xanpekjl';
+
 // Initialize all GSAP animations
 function initAnimations() {
     // Hero section animations
@@ -258,13 +261,30 @@ function initFormHandling() {
             
             // Get form data
             const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-            
-            // Show success message
-            showFormSuccess();
-            
-            // Reset form
-            form.reset();
+
+            // Send to form backend if configured
+            if (FORM_ENDPOINT && FORM_ENDPOINT.includes('/f/')) {
+                fetch(FORM_ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                        showFormSuccess();
+                        form.reset();
+                    } else {
+                        return response.json().then(err => { throw err; });
+                    }
+                })
+                .catch(() => {
+                    alert('Submission failed. Please try again or email us directly.');
+                });
+            } else {
+                // Fallback: no endpoint configured, just show success UI
+                showFormSuccess();
+                form.reset();
+            }
         });
     }
 
@@ -308,43 +328,27 @@ function showFormSuccess() {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: var(--dark-charcoal);
-        border: 2px solid var(--spark-cyan);
-        border-radius: 20px;
-        padding: 3rem;
+        z-index: 9999;
+        background: rgba(19, 26, 34, 0.95);
+        border: 1px solid rgba(80, 227, 194, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        padding: 24px 28px;
+        border-radius: 16px;
         text-align: center;
-        z-index: 10000;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        max-width: 500px;
-        width: 90%;
+        color: #e6f4f1;
+        backdrop-filter: blur(8px);
     `;
 
-    // Add to page
+    // Animate in
+    gsap.fromTo(successMessage, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" });
+
+    // Append to body
     document.body.appendChild(successMessage);
 
-    // Animate in
-    gsap.fromTo(successMessage, {
-        scale: 0,
-        opacity: 0
-    }, {
-        scale: 1,
-        opacity: 1,
-        duration: 0.5,
-        ease: "back.out(1.7)"
-    });
-
-    // Remove after 5 seconds
+    // Remove after 3 seconds
     setTimeout(() => {
-        gsap.to(successMessage, {
-            scale: 0,
-            opacity: 0,
-            duration: 0.3,
-            ease: "power2.in",
-            onComplete: () => {
-                document.body.removeChild(successMessage);
-            }
-        });
-    }, 5000);
+        gsap.to(successMessage, { opacity: 0, scale: 0.95, duration: 0.2, ease: "power2.in", onComplete: () => successMessage.remove() });
+    }, 3000);
 }
 
 // Initialize smooth scrolling
