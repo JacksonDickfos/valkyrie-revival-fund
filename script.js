@@ -254,59 +254,71 @@ function initFloatingElements() {
 
 // Initialize form handling
 function initFormHandling() {
-    const form = document.getElementById('investForm');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(form);
+	const form = document.getElementById('investForm');
+	if (form) {
+		form.addEventListener('submit', function(e) {
+			e.preventDefault();
+			
+			// Get form data
+			const formData = new FormData(form);
+			// Add helpful metadata for emails and triage
+			if (!formData.get('_replyto') && formData.get('email')) {
+				formData.append('_replyto', String(formData.get('email')));
+			}
+			formData.append('page_url', window.location.href);
+			formData.append('user_agent', navigator.userAgent);
 
-            // Send to form backend if configured
-            if (FORM_ENDPOINT && FORM_ENDPOINT.includes('/f/')) {
-                fetch(FORM_ENDPOINT, {
-                    method: 'POST',
-                    headers: { 'Accept': 'application/json' },
-                    body: formData
-                })
-                .then(response => {
-                    if (response.ok) {
-                        showFormSuccess();
-                        form.reset();
-                    } else {
-                        return response.json().then(err => { throw err; });
-                    }
-                })
-                .catch(() => {
-                    alert('Submission failed. Please try again or email us directly.');
-                });
-            } else {
-                // Fallback: no endpoint configured, just show success UI
-                showFormSuccess();
-                form.reset();
-            }
-        });
-    }
+			// Send to form backend if configured
+			if (FORM_ENDPOINT && FORM_ENDPOINT.includes('/f/')) {
+				fetch(FORM_ENDPOINT, {
+					method: 'POST',
+					headers: { 'Accept': 'application/json' },
+					body: formData
+				})
+				.then(async response => {
+					if (response.ok) {
+						showFormSuccess();
+						form.reset();
+						return;
+					}
+					let payload = null;
+					try { payload = await response.json(); } catch (_) {}
+					const errorMsg = payload && payload.errors && payload.errors.length
+						? payload.errors.map(e => e.message).join('\n')
+						: `Submission failed (status ${response.status}).`;
+					alert(errorMsg);
+				})
+				.catch((err) => {
+					console.error('Form submission error:', err);
+					alert('Submission failed due to a network error. Please try again or email us directly.');
+				});
+			} else {
+				// Fallback: no endpoint configured, just show success UI
+				showFormSuccess();
+				form.reset();
+			}
+		});
+	}
 
-    // Form input focus effects
-    const formInputs = document.querySelectorAll('.form-input, .form-select, .form-textarea');
-    formInputs.forEach(input => {
-        input.addEventListener('focus', () => {
-            gsap.to(input, {
-                scale: 1.02,
-                duration: 0.2,
-                ease: "power2.out"
-            });
-        });
+	// Form input focus effects
+	const formInputs = document.querySelectorAll('.form-input, .form-select, .form-textarea');
+	formInputs.forEach(input => {
+		input.addEventListener('focus', () => {
+			gsap.to(input, {
+				scale: 1.02,
+				duration: 0.2,
+				ease: "power2.out"
+			});
+		});
 
-        input.addEventListener('blur', () => {
-            gsap.to(input, {
-                scale: 1,
-                duration: 0.2,
-                ease: "power2.out"
-            });
-        });
-    });
+		input.addEventListener('blur', () => {
+			gsap.to(input, {
+				scale: 1,
+				duration: 0.2,
+				ease: "power2.out"
+			});
+		});
+	});
 }
 
 // Show form success message
