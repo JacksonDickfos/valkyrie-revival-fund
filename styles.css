@@ -1233,3 +1233,50 @@ body {
         font-size: 1rem;
     }
 } 
+/* Alternating Section Backgrounds */
+/* White backgrounds: hero, strategy, invest */
+.hero {
+    background: var(--pure-white) !important;
+    color: var(--dark-charcoal);
+}
+
+.hero .hero-title,
+.hero .hero-subtitle,
+.hero .hero-tagline,
+.hero .hero-message {
+    color: var(--dark-charcoal);
+}
+
+.strategy {
+    background: var(--pure-white) !important;
+    color: var(--dark-charcoal);
+}
+
+.strategy .section-title,
+.strategy .section-subtitle,
+.strategy .strategy-title,
+.strategy .strategy-description {
+    color: var(--dark-charcoal);
+}
+
+.invest {
+    background: var(--pure-white) !important;
+    color: var(--dark-charcoal);
+}
+
+.invest .section-title,
+.invest .section-subtitle,
+.invest .form-label,
+.invest .invest-info h3,
+.invest .invest-info li {
+    color: var(--dark-charcoal);
+}
+
+/* Dark backgrounds: about, prytaneum (keep existing) */
+.about {
+    background: var(--dark-charcoal) !important;
+}
+
+.prytaneum {
+    background: var(--dark-charcoal) !important;
+}
