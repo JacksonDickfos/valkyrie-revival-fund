@@ -1274,9 +1274,9 @@ body {
 
 /* Dark backgrounds: about, prytaneum (keep existing) */
 .about {
-    background: var(--dark-charcoal) !important;
+    background: #5F7B87 !important;
 }
 
 .prytaneum {
-    background: var(--dark-charcoal) !important;
+    background: #5F7B87 !important;
 }
