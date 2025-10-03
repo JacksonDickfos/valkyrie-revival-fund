@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -33,10 +34,10 @@
                 </a>
             </div>
             <div class="nav-menu">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#strategy" class="nav-link">Our Strategy</a>
-                <a href="#prytaneum" class="nav-link">Prytaneum Partners</a>
-                <a href="#invest" class="nav-link">Invest</a>
+                <a href="#about" class="nav-link">Who We Are</a>
+                <a href="#strategy" class="nav-link">What We Do</a>
+                <a href="#prytaneum" class="nav-link">Our Activity</a>
+                <a href="#invest" class="nav-link">Get In Touch</a>
             </div>
         </div>
     </nav>
@@ -73,8 +74,8 @@
     <section class="about" id="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">No Ordinary Fund</h2>
-                <p class="section-subtitle">We are the battlefield elite.</p>
+                <h2 class="section-title">Who We Are</h2>
+                <p class="section-subtitle">The operating core behind durable value creation.</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
@@ -103,8 +104,8 @@
     <section class="strategy" id="strategy">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Battlefield Doctrine</h2>
-                <p class="section-subtitle">Three pillars of operational domination</p>
+                <h2 class="section-title">What We Do</h2>
+                <p class="section-subtitle">Disciplined M&A and AI-native operating systems</p>
             </div>
             <div class="strategy-grid">
                 <div class="strategy-card">
@@ -136,8 +137,8 @@
     <section class="prytaneum" id="prytaneum">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Operational Excellence</h2>
-                <p class="section-subtitle">Powered by Prytaneum Partners</p>
+                <h2 class="section-title">Our Activity</h2>
+                <p class="section-subtitle">Latest updates and fund initiatives</p>
             </div>
             <div class="prytaneum-content">
                 <div class="prytaneum-text">
@@ -150,8 +151,25 @@
                     </div>
                 </div>
                 <div class="prytaneum-visual">
-                    <div class="prytaneum-embed">
-                        <iframe src="https://www.prytaneumpartners.com/" title="Prytaneum Partners" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="operational-grid">
+                        <div class="grid-item grid-item-1">
+                            <img src="images/prytaneum.png" alt="Prytaneum Partners" class="grid-logo">
+                        </div>
+                        <div class="grid-item grid-item-2">
+                            <img src="images/prytaneum.png" alt="Prytaneum Partners" class="grid-logo">
+                        </div>
+                        <div class="grid-item grid-item-3">
+                            <img src="images/prytaneum.png" alt="Prytaneum Partners" class="grid-logo">
+                        </div>
+                        <div class="grid-item grid-item-4">
+                            <img src="images/prytaneum.png" alt="Prytaneum Partners" class="grid-logo">
+                        </div>
+                        <div class="grid-item grid-item-5">
+                            <img src="images/prytaneum.png" alt="Prytaneum Partners" class="grid-logo">
+                        </div>
+                        <div class="grid-item grid-item-6">
+                            <img src="images/prytaneum.png" alt="Prytaneum Partners" class="grid-logo">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -162,34 +180,24 @@
     <section class="invest" id="invest">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Invest With Us</h2>
-                <p class="section-subtitle">Join the battlefield elite</p>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">If you hold a troubled asset with good bones, let’s talk.</p>
             </div>
             <div class="invest-content">
                 <div class="invest-form-container">
                     <form class="invest-form" id="investForm">
                         <input type="hidden" name="_subject" value="Valkyrie Revival Fund - New Investment Interest" />
                         <div class="form-group">
-                            <label for="firstName" class="form-label">Name</label>
-                            <input type="text" id="firstName" name="firstName" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email Address</label>
+                            <label for="email" class="form-label">Email Address *</label>
                             <input type="email" id="email" name="email" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label for="investmentSize" class="form-label">Investment Size</label>
-                            <select id="investmentSize" name="investmentSize" class="form-select" required>
-                                <option value="">Select Investment Size</option>
-                                <option value="1-5M">$1M - $5M</option>
-                                <option value="5-10M">$5M - $10M</option>
-                                <option value="10-25M">$10M - $25M</option>
-                                <option value="25M+">$25M+</option>
-                            </select>
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
                         </div>
                         <div class="form-group">
-                            <label for="message" class="form-label">Message (Optional)</label>
-                            <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Tell us about your investment goals..."></textarea>
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Tell us about your company and how we might work together..." required></textarea>
                         </div>
                         <button type="submit" class="submit-button">
                             <span>Submit Interest</span>
