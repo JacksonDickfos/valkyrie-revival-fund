@@ -1,8 +1,8 @@
 /* Brand Color Variables */
 :root {
     --pp-obsidian-olive: #2F2F21;
-    --pp-hearth-gold: linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 50%, #808080 100%);
-    --pp-hearth-gold-deep: linear-gradient(135deg, #A8A8A8 0%, #808080 50%, #696969 100%);
+    --pp-hearth-gold: #696969;
+    --pp-hearth-gold-deep: #555555;
     --pp-temple-bronze: #574F31;
     --pp-charcoal: #262626;
     --pp-parchment: #FDFCF8;
@@ -92,10 +92,7 @@ body {
 }
 
 .nav-menu a {
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -103,10 +100,7 @@ body {
 }
 
 .nav-menu a:hover {
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
 }
 
 .nav-menu a::after {
@@ -238,10 +232,7 @@ body {
     transform: translateY(-180px);
 }
 .gradient-text {
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
 }
 
 .hero-subtitle {
@@ -249,10 +240,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -309,7 +297,7 @@ body {
     color: var(--pp-white);
     background: #FFFFFF;
     color: var(--pp-charcoal);
-    border: 2px solid #A8A8A8;
+    border: 2px solid var(--pp-hearth-gold);
     background: var(--pp-hearth-gold);
 }
 
@@ -344,15 +332,12 @@ body {
 .grid-item:hover {
     transform: translateY(-27.5px);
     background: rgba(209, 173, 92, 0.1);
-    border-color: #A8A8A8;
+    border-color: var(--pp-hearth-gold);
 }
 
 .grid-item i {
     font-size: 2.5rem;
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
     margin-bottom: 1rem;
     display: block;
 }
@@ -386,10 +371,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
 }
 
 .section-header p {
@@ -438,10 +420,7 @@ body {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
     margin-bottom: 0.5rem;
 }
 
@@ -511,10 +490,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
     text-transform: uppercase;
     letter-spacing: 2px;
     opacity: 0;
@@ -595,7 +571,7 @@ body {
 
 .service-card:hover {
     transform: translateY(-27.5px);
-    border-color: #A8A8A8;
+    border-color: var(--pp-hearth-gold);
     box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
 }
 
@@ -612,10 +588,7 @@ body {
 
 .service-icon i {
     font-size: 3rem;
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
 }
 
 .service-card h3 {
@@ -685,10 +658,7 @@ body {
 .linkedin-embed h3, .fund-links h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
 }
 
 .linkedin-placeholder {
@@ -723,7 +693,7 @@ body {
 
 .linkedin-placeholder:hover {
     transform: translateY(-27.5px);
-    border-color: #A8A8A8;
+    border-color: var(--pp-hearth-gold);
     box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
 }
 
@@ -777,7 +747,7 @@ body {
 
 .fund-card:hover {
     transform: translateY(-27.5px);
-    border-color: #A8A8A8;
+    border-color: var(--pp-hearth-gold);
     box-shadow: 0 10px 30px rgba(209, 173, 92, 0.2);
 }
 
@@ -878,10 +848,7 @@ body {
 
 .valkyrie-fund .section-header p {
     font-size: 1.2rem;
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
@@ -941,7 +908,7 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #A8A8A8;
+    border-color: var(--pp-hearth-gold);
     box-shadow: 0 0 0 3px rgba(209, 173, 92, 0.1);
 }
 
@@ -968,20 +935,14 @@ body {
 
 .info-item i {
     font-size: 1.5rem;
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
     width: 40px;
     text-align: center;
 }
 
 .info-item h4 {
     margin-bottom: 0.5rem;
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
 }
 
 .info-item p {
@@ -1021,20 +982,14 @@ body {
 }
 
 .company-name {
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
 }
 
 .company-slogan {
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 0.9rem;
@@ -1057,10 +1012,7 @@ body {
 }
 
 .footer-nav a:hover {
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
 }
 
 .footer-social {
@@ -1574,10 +1526,7 @@ body:not(.at-top) .navbar::after {
 
 .mobile-menu a:hover {
     background-color: rgba(209, 173, 92, 0.1);
-    background: var(--pp-hearth-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--pp-hearth-gold);
 }
 
 /* Mobile hero section fixes */
