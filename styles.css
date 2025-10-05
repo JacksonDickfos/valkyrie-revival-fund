@@ -4,6 +4,7 @@
     --pp-hearth-gold: #696969;
     --pp-hearth-gold-deep: #555555;
     --pp-soft-silver: #C0C0C0;
+    --pp-navy-blue: #1B2951;
     --pp-temple-bronze: #574F31;
     --pp-charcoal: #262626;
     --pp-parchment: #FDFCF8;
@@ -41,7 +42,7 @@ body {
     position: static;
     
     width: 100%;
-    background: #FFFFFF;
+    background: var(--pp-navy-blue);
     backdrop-filter: none;
     z-index: 1000;
     transition: all 0.3s ease;
@@ -93,7 +94,7 @@ body {
 }
 
 .nav-menu a {
-    color: var(--pp-hearth-gold);
+    color: var(--pp-white);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -101,7 +102,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--pp-hearth-gold);
+    color: var(--pp-soft-silver);
 }
 
 .nav-menu a::after {
@@ -269,7 +270,7 @@ body {
     transform: translateY(-180px);
 }
 .gradient-text {
-    color: var(--pp-hearth-gold);
+    color: var(--pp-navy-blue);
 }
 
 .hero-subtitle {
@@ -318,15 +319,16 @@ body {
 .btn-primary {
     color: #FFFFFF !important;
     color: var(--pp-white);
-    background: var(--pp-hearth-gold);
-    color: var(--pp-charcoal);
-    box-shadow: 0 4px 15px rgba(192, 192, 192, 0.4);
+    background: var(--pp-navy-blue);
+    color: var(--pp-white);
+    box-shadow: 0 4px 15px rgba(27, 41, 81, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(192, 192, 192, 0.6);
-    color: var(--pp-charcoal);
+    box-shadow: 0 6px 20px rgba(27, 41, 81, 0.6);
+    color: var(--pp-white);
+    background: #0F1A3A;
 }
 
 .btn-secondary {
