@@ -184,8 +184,48 @@ body {
     box-shadow: 0 0 10px rgba(192, 192, 192, 0.6);
 }
 
-.ecg-pulse-1 {
+.ecg-wave {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ecg-wave-1 {
     left: 15%;
+}
+
+.ecg-wave-5 {
+    left: 85%;
+}
+
+.ecg-wave::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: var(--pp-soft-silver);
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    animation: ecgWave 2s ease-in-out infinite;
+}
+
+.ecg-wave::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background: var(--pp-soft-silver);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    animation: ecgWave 2s ease-in-out infinite;
+}
+
+.ecg-pulse-1 {
+    left: 0;
     animation-delay: 0s;
 }
 
@@ -208,7 +248,7 @@ body {
 }
 
 .ecg-pulse-5 {
-    left: 85%;
+    left: 0;
     animation-delay: 1.6s;
 }
 
@@ -234,14 +274,43 @@ body {
     }
 }
 
-.hero:hover .ecg-pulse {
+@keyframes ecgWave {
+    0%, 100% { 
+        opacity: 0.4;
+        transform: translateY(-50%) scale(1);
+    }
+    50% { 
+        opacity: 0.8;
+        transform: translateY(-50%) scale(1.2);
+    }
+}
+
+.hero-visual:hover ~ .hero-text .ecg-pulse,
+.hero-text:hover .ecg-pulse,
+.hero-visual:hover .ecg-pulse,
+.hero-cta:hover .ecg-pulse {
     animation-duration: 0.8s;
     box-shadow: 0 0 20px rgba(192, 192, 192, 1);
 }
 
-.hero:hover .ecg-line {
+.hero-visual:hover ~ .hero-text .ecg-line,
+.hero-text:hover .ecg-line,
+.hero-visual:hover .ecg-line,
+.hero-cta:hover .ecg-line {
     animation-duration: 1.5s;
     opacity: 0.8;
+}
+
+.hero-visual:hover ~ .hero-text .ecg-wave::before,
+.hero-visual:hover ~ .hero-text .ecg-wave::after,
+.hero-text:hover .ecg-wave::before,
+.hero-text:hover .ecg-wave::after,
+.hero-visual:hover .ecg-wave::before,
+.hero-visual:hover .ecg-wave::after,
+.hero-cta:hover .ecg-wave::before,
+.hero-cta:hover .ecg-wave::after {
+    animation-duration: 0.8s;
+    opacity: 1;
 }
 
 .hero-content {
