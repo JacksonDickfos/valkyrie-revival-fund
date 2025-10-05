@@ -42,7 +42,7 @@ body {
     position: static;
     
     width: 100%;
-    background: var(--pp-navy-blue);
+    background: #FFFFFF;
     backdrop-filter: none;
     z-index: 1000;
     transition: all 0.3s ease;
@@ -94,7 +94,7 @@ body {
 }
 
 .nav-menu a {
-    color: var(--pp-white);
+    color: var(--pp-hearth-gold);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -102,7 +102,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--pp-soft-silver);
+    color: var(--pp-hearth-gold);
 }
 
 .nav-menu a::after {
