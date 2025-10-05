@@ -152,7 +152,7 @@ body {
     z-index: 1;
 }
 
-.ecg-pulse-container {
+.ecg-revival-container {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -160,157 +160,83 @@ body {
     align-items: center;
     justify-content: center;
     pointer-events: none;
+    overflow: hidden;
 }
 
-.ecg-line {
+.ecg-wave-svg {
     position: absolute;
-    width: 80%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.3), transparent);
+    width: 100%;
+    height: 200px;
     top: 50%;
-    left: 10%;
-    animation: ecgLine 3s ease-in-out infinite;
-}
-
-.ecg-pulse {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: var(--pp-soft-silver);
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    animation: ecgPulse 2s ease-in-out infinite;
-    box-shadow: 0 0 10px rgba(192, 192, 192, 0.6);
-}
-
-.ecg-wave {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.ecg-wave-1 {
-    left: 15%;
-}
-
-.ecg-wave-5 {
-    left: 85%;
-}
-
-.ecg-wave::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    background: var(--pp-soft-silver);
-    top: 50%;
-    left: -10px;
-    transform: translateY(-50%);
-    opacity: 0.6;
-    animation: ecgWave 2s ease-in-out infinite;
-}
-
-.ecg-wave::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 15px;
-    background: var(--pp-soft-silver);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.6;
-    animation: ecgWave 2s ease-in-out infinite;
-}
-
-.ecg-pulse-1 {
     left: 0;
-    animation-delay: 0s;
+    transform: translateY(-50%);
+    z-index: 1;
 }
 
-.ecg-pulse-2 {
-    left: 35%;
-    animation-delay: 0.4s;
+.ecg-heartbeat {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: ecgRevival 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px rgba(192, 192, 192, 0.4));
 }
 
-.ecg-pulse-3 {
-    left: 50%;
-    animation-delay: 0.8s;
-    width: 6px;
-    height: 6px;
-    box-shadow: 0 0 15px rgba(192, 192, 192, 0.8);
+.ecg-pulse-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 0%, transparent 30%, rgba(192, 192, 192, 0.1) 50%, transparent 70%);
+    animation: ecgPulseGlow 2s ease-in-out infinite;
+    z-index: 2;
 }
 
-.ecg-pulse-4 {
-    left: 65%;
-    animation-delay: 1.2s;
-}
-
-.ecg-pulse-5 {
-    left: 0;
-    animation-delay: 1.6s;
-}
-
-@keyframes ecgLine {
-    0%, 100% { 
-        opacity: 0.3;
-        transform: scaleX(1);
-    }
-    50% { 
-        opacity: 0.6;
-        transform: scaleX(1.1);
-    }
-}
-
-@keyframes ecgPulse {
-    0%, 100% { 
+@keyframes ecgRevival {
+    0% {
+        stroke-dashoffset: 1000;
         opacity: 0.4;
-        transform: translateY(-50%) scale(1);
     }
-    50% { 
-        opacity: 1;
-        transform: translateY(-50%) scale(1.5);
-    }
-}
-
-@keyframes ecgWave {
-    0%, 100% { 
-        opacity: 0.4;
-        transform: translateY(-50%) scale(1);
-    }
-    50% { 
+    25% {
+        stroke-dashoffset: 750;
         opacity: 0.8;
-        transform: translateY(-50%) scale(1.2);
+    }
+    50% {
+        stroke-dashoffset: 500;
+        opacity: 1;
+    }
+    75% {
+        stroke-dashoffset: 250;
+        opacity: 0.8;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 0.4;
     }
 }
 
-.hero-visual:hover ~ .hero-text .ecg-pulse,
-.hero-text:hover .ecg-pulse,
-.hero-visual:hover .ecg-pulse,
-.hero-cta:hover .ecg-pulse {
-    animation-duration: 0.8s;
-    box-shadow: 0 0 20px rgba(192, 192, 192, 1);
+@keyframes ecgPulseGlow {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
 }
 
-.hero-visual:hover ~ .hero-text .ecg-line,
-.hero-text:hover .ecg-line,
-.hero-visual:hover .ecg-line,
-.hero-cta:hover .ecg-line {
-    animation-duration: 1.5s;
+.hero-visual:hover ~ .hero-text .ecg-heartbeat,
+.hero-text:hover .ecg-heartbeat,
+.hero-visual:hover .ecg-heartbeat,
+.hero-cta:hover .ecg-heartbeat {
+    animation-duration: 2s;
+    filter: drop-shadow(0 0 10px rgba(192, 192, 192, 0.8));
+}
+
+.hero-visual:hover ~ .hero-text .ecg-pulse-overlay,
+.hero-text:hover .ecg-pulse-overlay,
+.hero-visual:hover .ecg-pulse-overlay,
+.hero-cta:hover .ecg-pulse-overlay {
+    animation-duration: 1s;
     opacity: 0.8;
-}
-
-.hero-visual:hover ~ .hero-text .ecg-wave::before,
-.hero-visual:hover ~ .hero-text .ecg-wave::after,
-.hero-text:hover .ecg-wave::before,
-.hero-text:hover .ecg-wave::after,
-.hero-visual:hover .ecg-wave::before,
-.hero-visual:hover .ecg-wave::after,
-.hero-cta:hover .ecg-wave::before,
-.hero-cta:hover .ecg-wave::after {
-    animation-duration: 0.8s;
-    opacity: 1;
 }
 
 .hero-content {
