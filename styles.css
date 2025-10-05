@@ -152,55 +152,96 @@ body {
     z-index: 1;
 }
 
-.floating-shapes {
+.ecg-pulse-container {
     position: absolute;
     width: 100%;
     height: 100%;
-}
-
-.shape {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(192, 192, 192, 0.1);
-    animation: float 2s ease-in-out infinite;
-    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     pointer-events: none;
 }
-.shape-1 {
-    width: 100px;
-    height: 100px;
-    top: 20%;
+
+.ecg-line {
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.3), transparent);
+    top: 50%;
     left: 10%;
+    animation: ecgLine 3s ease-in-out infinite;
+}
+
+.ecg-pulse {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--pp-soft-silver);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: ecgPulse 2s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(192, 192, 192, 0.6);
+}
+
+.ecg-pulse-1 {
+    left: 15%;
     animation-delay: 0s;
 }
 
-.shape-2 {
-    width: 150px;
-    height: 150px;
-    top: 60%;
-    right: 15%;
-    animation-delay: 2s;
+.ecg-pulse-2 {
+    left: 35%;
+    animation-delay: 0.4s;
 }
 
-.shape-3 {
-    width: 80px;
-    height: 80px;
-    bottom: 20%;
-    left: 20%;
-    animation-delay: 4s;
+.ecg-pulse-3 {
+    left: 50%;
+    animation-delay: 0.8s;
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 15px rgba(192, 192, 192, 0.8);
 }
 
-.shape-4 {
-    width: 120px;
-    height: 120px;
-    top: 30%;
-    right: 30%;
-    animation-delay: 1s;
+.ecg-pulse-4 {
+    left: 65%;
+    animation-delay: 1.2s;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
+.ecg-pulse-5 {
+    left: 85%;
+    animation-delay: 1.6s;
+}
+
+@keyframes ecgLine {
+    0%, 100% { 
+        opacity: 0.3;
+        transform: scaleX(1);
+    }
+    50% { 
+        opacity: 0.6;
+        transform: scaleX(1.1);
+    }
+}
+
+@keyframes ecgPulse {
+    0%, 100% { 
+        opacity: 0.4;
+        transform: translateY(-50%) scale(1);
+    }
+    50% { 
+        opacity: 1;
+        transform: translateY(-50%) scale(1.5);
+    }
+}
+
+.hero:hover .ecg-pulse {
+    animation-duration: 0.8s;
+    box-shadow: 0 0 20px rgba(192, 192, 192, 1);
+}
+
+.hero:hover .ecg-line {
+    animation-duration: 1.5s;
+    opacity: 0.8;
 }
 
 .hero-content {
