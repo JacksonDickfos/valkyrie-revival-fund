@@ -273,6 +273,8 @@ body {
     color: var(--pp-navy-blue);
     background: var(--pp-white);
     padding: 0.5rem 1rem;
+    padding-top: calc(0.5rem + 10px);
+    padding-bottom: calc(0.5rem + 10px);
     border-radius: 8px;
     display: inline-block;
 }
