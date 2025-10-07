@@ -399,7 +399,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #9B8A66;
+    color: #4F555A;
 }
 
 .section-header p {
@@ -870,7 +870,7 @@ body {
 	white-space: nowrap;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #9B8A66;
+    color: #4F555A;
     letter-spacing: 3px;
 }
 
@@ -1242,7 +1242,7 @@ body {
 }
 .valkyrie-fund .section-header h2,
 .valkyrie-fund .valkyrie-text p {
-    color: var(--pp-charcoal);
+    color: #4F555A;
 }
 
 /* 6) Contact: cream */
