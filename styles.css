@@ -250,7 +250,7 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
-    gap: 0.25rem;
+    gap: 1.5rem;
     transform: translateY(30px);
 }.hero-title {
     font-family: 'Cinzel', serif;
@@ -283,15 +283,10 @@ body {
 
 .hero-description {
     font-size: 1.1rem;
-    margin-bottom: 0.35rem;
+    margin-bottom: 2rem;
     color: var(--pp-charcoal);
-    line-height: 1.55;
+    line-height: 1.7;
     transform: translateY(-180px);
-}
-
-/* Slight extra spacing only between the two consecutive hero lines */
-.hero-description + .hero-description {
-    margin-top: 0.6rem;
 }
 .hero-cta {
     display: flex;
@@ -1616,11 +1611,18 @@ body:not(.at-top) .navbar::after {
 }    
 .hero-description {
     font-size: 1.1rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 2rem;
     color: var(--pp-charcoal);
-    line-height: 1.5;
+    line-height: 1.7;
     transform: translateY(-180px);
 }    
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--pp-charcoal);
+    line-height: 1.7;
+    transform: translateY(-180px);
+}
     .rotating-logo {
         width: 200px;
         height: 200px;
