@@ -285,7 +285,7 @@ body {
     color: var(--pp-charcoal);
     line-height: 1.7;
     transform: translateY(-180px);
-    max-width: 950px;
+    max-width: 1200px;
 }
 .hero-cta {
     display: flex;
