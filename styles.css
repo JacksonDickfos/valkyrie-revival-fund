@@ -252,7 +252,7 @@ body {
     transform: translateY(-180px);
 }
 .gradient-text {
-    color: var(--pp-navy-blue);
+    color: #9B8A66;
     background: var(--pp-white);
     padding: 0.5rem 1rem;
     padding-top: calc(0.5rem + 10px);
@@ -398,7 +398,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--pp-hearth-gold);
+    color: #9B8A66;
 }
 
 .section-header p {
@@ -517,7 +517,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
-    color: var(--pp-hearth-gold);
+    color: #9B8A66;
     text-transform: uppercase;
     letter-spacing: 2px;
     opacity: 0;
@@ -869,7 +869,7 @@ body {
 	white-space: nowrap;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--pp-charcoal);
+    color: #9B8A66;
     letter-spacing: 3px;
 }
 
