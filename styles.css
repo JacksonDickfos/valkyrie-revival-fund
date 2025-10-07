@@ -690,7 +690,7 @@ body {
 }
 
 .linkedin-placeholder {
-    background: var(--pp-white);
+    background: transparent;
     border: 1px solid rgba(192, 192, 192, 0.2);
     border-radius: 16px;
     padding: 2rem;
@@ -745,7 +745,7 @@ body {
 }
 
 .fund-card {
-    background: var(--pp-white);
+    background: transparent;
     border: 1px solid rgba(192, 192, 192, 0.2);
     border-radius: 16px;
     padding: 2rem;
