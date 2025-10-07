@@ -1201,7 +1201,7 @@ body {
 
 /* 2) About: cream */
 .about {
-    background: var(--pp-parchment);
+    background: #E4E2DA;
     color: var(--pp-charcoal);
 }
 .about .about-text p,
@@ -1213,7 +1213,7 @@ body {
 
 /* 3) Services: white */
 .services {
-    background: var(--pp-white);
+    background: #D6D2C4;
     color: var(--pp-charcoal);
 }
 .services .section-header p,
@@ -1224,7 +1224,7 @@ body {
 
 /* 4) Resources: cream */
 .resources {
-    background: var(--pp-parchment);
+    background: #E4E2DA;
     color: var(--pp-charcoal);
 }
 .resources .section-header p,
@@ -1248,8 +1248,8 @@ body {
 /* 6) Contact: cream */
 /* 7) Footer: white */
 .footer {
-    background: var(--pp-white);
-    color: var(--pp-charcoal);
+    background: #2F3235;
+    color: var(--pp-white);
 }
 .footer .footer-nav a,
 .footer .footer-bottom p {
