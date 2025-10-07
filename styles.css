@@ -1074,20 +1074,19 @@ body {
     color: #FFFFFF !important;
     width: 40px;
     height: 40px;
-    background: var(--pp-hearth-gold);
+    background: linear-gradient(135deg, #B8B8B8 0%, #E2E2E2 35%, #9A9A9A 60%, #F0F0F0 85%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--pp-charcoal);
+    color: #FFFFFF !important;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .social-links a:hover {
     color: #FFFFFF !important;
-    background: var(--pp-hearth-gold-deep);
-    color: var(--pp-charcoal);
+    background: linear-gradient(135deg, #C8C8C8 0%, #F5F5F5 35%, #AFAFAF 60%, #FFFFFF 85%);
     transform: translateY(-2px);
 }
 
