@@ -1010,14 +1010,22 @@ body {
 }
 
 .company-name {
-    color: var(--pp-hearth-gold);
+    background: linear-gradient(90deg, #B8B8B8, #E2E2E2, #9A9A9A, #E2E2E2, #B8B8B8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
 }
 
 .company-slogan {
-    color: var(--pp-hearth-gold);
+    background: linear-gradient(90deg, #B8B8B8, #E2E2E2, #9A9A9A, #E2E2E2, #B8B8B8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 0.9rem;
@@ -1033,14 +1041,22 @@ body {
 }
 
 .footer-nav a {
-    color: #4F555A;
+    background: linear-gradient(90deg, #B8B8B8, #E2E2E2, #9A9A9A, #E2E2E2, #B8B8B8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: 500;
 }
 
 .footer-nav a:hover {
-    color: #4F555A;
+    background: linear-gradient(90deg, #C8C8C8, #F0F0F0, #AAAAAA, #F0F0F0, #C8C8C8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .footer-social {
