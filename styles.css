@@ -95,7 +95,7 @@ body {
 }
 
 .nav-menu a {
-    color: var(--pp-hearth-gold);
+    color: #4F555A;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -103,7 +103,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--pp-hearth-gold);
+    color: #4F555A;
 }
 
 .nav-menu a::after {
@@ -113,7 +113,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--pp-hearth-gold);
+    background: #4F555A;
     transition: width 0.3s ease;
 }
 
