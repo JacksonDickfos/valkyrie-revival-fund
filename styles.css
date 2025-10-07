@@ -285,6 +285,7 @@ body {
     color: var(--pp-charcoal);
     line-height: 1.7;
     transform: translateY(-180px);
+    max-width: 600px;
 }
 .hero-cta {
     display: flex;
@@ -1609,20 +1610,6 @@ body:not(.at-top) .navbar::after {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.1;
-    transform: translateY(-180px);
-}    
-.hero-description {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: var(--pp-charcoal);
-    line-height: 1.7;
-    transform: translateY(-180px);
-}    
-.hero-description {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: var(--pp-charcoal);
-    line-height: 1.7;
     transform: translateY(-180px);
 }
     .rotating-logo {
