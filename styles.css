@@ -283,16 +283,22 @@ body {
 
 .hero-description {
     font-size: 1.1rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
     color: var(--pp-charcoal);
-    line-height: 1.5;
+    line-height: 1.55;
     transform: translateY(-180px);
+}
+
+/* Slight extra spacing only between the two consecutive hero lines */
+.hero-description + .hero-description {
+    margin-top: 0.4rem;
 }
 .hero-cta {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
     transform: translateY(-180px);
+    margin-top: 1rem;
 }
 .btn-primary, .btn-secondary {
     color: #FFFFFF !important;
