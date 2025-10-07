@@ -1253,7 +1253,7 @@ body {
 }
 .footer .footer-nav a,
 .footer .footer-bottom p {
-    color: var(--pp-white);
+    color: #4F555A;
 }
 
 /* Typography: use logo font for all headings and nav brand text */
