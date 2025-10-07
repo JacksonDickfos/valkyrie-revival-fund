@@ -281,7 +281,7 @@ body {
 
 .hero-description {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     color: var(--pp-charcoal);
     line-height: 1.7;
     transform: translateY(-180px);
@@ -292,7 +292,7 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
     transform: translateY(-180px);
-    margin-top: 1.25rem;
+    margin-top: 0.5rem;
 }
 .btn-primary, .btn-secondary {
     color: #FFFFFF !important;
