@@ -253,7 +253,7 @@ body {
 }
 .gradient-text {
     color: #4F555A;
-    background: var(--pp-white);
+    background: transparent;
     padding: 0.5rem 1rem;
     padding-top: calc(0.5rem + 10px);
     padding-bottom: calc(0.5rem + 10px);
