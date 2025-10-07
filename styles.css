@@ -239,7 +239,7 @@ body {
     text-align: center;
     gap: 1rem;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
@@ -910,7 +910,7 @@ body {
 .contact-form {
     color: var(--pp-charcoal);
     color: var(--pp-charcoal);
-    max-width: 600px;
+    max-width: 1000px;
     width: 100%;
 }
 
@@ -1135,7 +1135,7 @@ body {
     text-align: center;
     gap: 1rem;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
@@ -1598,7 +1598,7 @@ body:not(.at-top) .navbar::after {
     text-align: center;
     gap: 1rem;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
@@ -1638,7 +1638,7 @@ body:not(.at-top) .navbar::after {
     text-align: center;
     gap: 1rem;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
