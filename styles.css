@@ -140,7 +140,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    background: #D6D2C4;
+    background: #D1D3CE;
     overflow: hidden;
 }
 
@@ -1189,7 +1189,7 @@ body {
 
 /* 1) Hero: white */
 .hero {
-    background: #D6D2C4;
+    background: #D1D3CE;
     color: var(--pp-charcoal);
 }
 .hero .hero-text,
