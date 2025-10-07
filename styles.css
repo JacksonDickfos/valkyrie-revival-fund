@@ -1033,14 +1033,14 @@ body {
 }
 
 .footer-nav a {
-    color: var(--pp-charcoal);
+    color: #4F555A;
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: 500;
 }
 
 .footer-nav a:hover {
-    color: var(--pp-hearth-gold);
+    color: #4F555A;
 }
 
 .footer-social {
