@@ -1664,9 +1664,9 @@ body:not(.at-top) .navbar::after {
 }    
 .hero-description {
     font-size: 1.1rem;
-    margin-bottom: 0.35rem;
+    margin-bottom: 2rem;
     color: var(--pp-charcoal);
-    line-height: 1.55;
+    line-height: 1.7;
     transform: translateY(-180px);
 }
     .rotating-logo {
