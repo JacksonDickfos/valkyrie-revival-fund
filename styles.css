@@ -174,73 +174,47 @@ body {
     z-index: 1;
 }
 
-.ecg-revival-container {
+/* ECG background */
+.ecg-background {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.ecg-wave-svg {
-    position: absolute;
+    top: 50%;
+    left: 0;
     width: 100%;
     height: 200px;
-    top: calc(50% - 310px);
-    left: 0;
-    transform: translateY(-50%);
+    transform: translateY(calc(-50% - 330px)); /* Adjust this value to position vertically */
     z-index: 1;
+    overflow: hidden;
+    opacity: 0.85;
 }
 
-.ecg-heartbeat {
+.ecg-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Stop scrolling the whole track; keep static */
+.ecg-track {
+    transform: none;
+    animation: none;
+}
+
+.ecg-line {
+    fill: none;
+    stroke: #AA3D1D; /* Change this color to match your brand */
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 6px rgba(170, 61, 29, 0.35)); /* Adjust shadow color to match stroke */
+    /* Draw-on animation */
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: ecgRevival 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 5px rgba(192, 192, 192, 0.4));
+    animation: ecg-draw 8s linear infinite;
 }
 
-
-@keyframes ecgRevival {
-    0% {
-        stroke-dashoffset: 1000;
-        opacity: 0.4;
-    }
-    25% {
-        stroke-dashoffset: 750;
-        opacity: 0.8;
-    }
-    50% {
-        stroke-dashoffset: 500;
-        opacity: 1;
-    }
-    75% {
-        stroke-dashoffset: 250;
-        opacity: 0.8;
-    }
-    100% {
-        stroke-dashoffset: 0;
-        opacity: 0.4;
-    }
-}
-
-
-.hero-visual:hover ~ .hero-text .ecg-heartbeat,
-.hero-text:hover .ecg-heartbeat,
-.hero-visual:hover .ecg-heartbeat,
-.hero-cta:hover .ecg-heartbeat {
-    animation-duration: 2s;
-    filter: drop-shadow(0 0 10px rgba(192, 192, 192, 0.8));
-}
-
-.hero-visual:hover ~ .hero-text .ecg-pulse-overlay,
-.hero-text:hover .ecg-pulse-overlay,
-.hero-visual:hover .ecg-pulse-overlay,
-.hero-cta:hover .ecg-pulse-overlay {
-    animation-duration: 1s;
-    opacity: 0.8;
+@keyframes ecg-draw {
+    0% { stroke-dashoffset: 1000; }
+    99% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: 0; }
 }
 
 .hero-content {
