@@ -7,6 +7,17 @@
 .card-link .linkedin-placeholder {
     cursor: pointer;
 }
+
+.linked-text {
+    color: var(--pp-navy-blue);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.linked-text:hover {
+    color: #0F1A3A;
+}
 /* Brand Color Variables */
 :root {
     --pp-obsidian-olive: #2F2F21;
