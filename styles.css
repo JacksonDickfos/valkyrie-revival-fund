@@ -244,6 +244,7 @@ body {
     padding: 2rem;
     position: relative;
     z-index: 20;
+    transform: translateY(10px);
 }.hero-text {
     display: flex;
     flex-direction: column;
@@ -1140,6 +1141,7 @@ body {
     padding: 2rem;
     position: relative;
     z-index: 20;
+    transform: translateY(10px);
 }.hero-title {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
@@ -1603,6 +1605,7 @@ body:not(.at-top) .navbar::after {
     padding: 2rem;
     position: relative;
     z-index: 20;
+    transform: translateY(10px);
 }.hero-title {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
@@ -1643,6 +1646,7 @@ body:not(.at-top) .navbar::after {
     padding: 2rem;
     position: relative;
     z-index: 20;
+    transform: translateY(10px);
 }    
 .hero-title {
     font-family: 'Cinzel', serif;
