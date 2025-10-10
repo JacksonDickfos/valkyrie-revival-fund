@@ -700,6 +700,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    min-height: 300px;
     height: 100%;
 }
 
@@ -754,6 +755,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    min-height: 300px;
     height: 100%;
 }
 
