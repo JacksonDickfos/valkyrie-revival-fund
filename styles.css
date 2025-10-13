@@ -1699,7 +1699,7 @@ body:not(.at-top) .navbar::after {
     .hero { padding-top: 60px; }
     .hero-visual { transform: translateY(-80px); }
     .ecg-background { transform: translateY(calc(-50% - 320px)); }
-    .hero .hero-title { font-size: 2.6rem; }
+    .hero .hero-title { font-size: 3.0rem; }
 }
 
 @media (max-width: 768px) {
