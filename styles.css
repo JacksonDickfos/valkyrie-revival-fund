@@ -1686,3 +1686,9 @@ body:not(.at-top) .navbar::after {
     .ecg-background { transform: translateY(calc(-50% - 320px)); }
     .hero .hero-title { font-size: 2.6rem; }
 }
+
+@media (max-width: 768px) {
+    /* Keep logo/ECG where they are, but lower tagline and title for separation */
+    .hero-tagline { bottom: -20px; }
+    .hero-title { transform: translateY(-160px); }
+}
