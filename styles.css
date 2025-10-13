@@ -1710,7 +1710,7 @@ body:not(.at-top) .navbar::after {
 
 @media (max-width: 768px) {
     /* Place slogan clearly below the logo */
-    .hero-tagline { top: 85%; bottom: auto; transform: translateX(-50%); }
+    .hero-tagline { top: 92%; bottom: auto; transform: translateX(-50%); }
     /* Lower the title and tighten spacing to description */
     .hero-title { transform: translateY(-110px); }
     .hero-description { transform: translateY(-105px); }
