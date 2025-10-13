@@ -1666,3 +1666,8 @@ body:not(.at-top) .navbar::after {
         gap: 1rem;
     }
 }
+
+@media (max-width: 768px) {
+    .navbar { display: none !important; }
+    .hero { padding-top: 0; }
+}
