@@ -181,7 +181,7 @@ body {
     left: 0;
     width: 100%;
     height: 200px;
-    transform: translateY(calc(-50% - 330px)); /* Adjust this value to position vertically */
+    transform: translateY(calc(-50% - 325px)); /* Adjust this value to position vertically */
     z-index: 1;
     overflow: hidden;
     opacity: 0.85;
