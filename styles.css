@@ -1688,7 +1688,7 @@ body:not(.at-top) .navbar::after {
 }
 
 @media (max-width: 768px) {
-    /* Keep logo/ECG where they are, but lower tagline and title for separation */
-    .hero-tagline { bottom: -20px; }
-    .hero-title { transform: translateY(-160px); }
+    /* Keep logo/ECG where they are, but adjust tagline and title separation */
+    .hero-tagline { bottom: 70px; }
+    .hero-title { transform: translateY(-120px); }
 }
