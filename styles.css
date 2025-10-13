@@ -270,7 +270,7 @@ body {
     margin-bottom: 0.5rem;
     color: var(--pp-charcoal);
     line-height: 1.7;
-    transform: translateY(-170px);
+    transform: translateY(-180px);
     max-width: 600px;
 }
 .hero-cta {
