@@ -1366,7 +1366,22 @@ body {
     margin-bottom: 1rem;
     line-height: 1.1;
     transform: translateY(-180px);
-}}
+}    
+    .rotating-logo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .logo-core-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hero-tagline {
+        font-size: 0.9rem;
+        gap: 1rem;
+    }
+}
 
 
 /* Contact form card styling inspired by provided design */
@@ -1694,10 +1709,10 @@ body:not(.at-top) .navbar::after {
 }
 
 @media (max-width: 768px) {
-    /* Place slogan just below logo inside the 500px logo box */
-    .hero-tagline { top: 72%; bottom: auto; transform: translateX(-50%); }
-    /* Separate title from tagline and description */
-    .hero-title { transform: translateY(-150px); }
-    .hero-description { transform: translateY(-110px); }
-    .hero-cta { transform: translateY(-110px); }
+    /* Place slogan clearly below the logo */
+    .hero-tagline { top: 85%; bottom: auto; transform: translateX(-50%); }
+    /* Lower the title and tighten spacing to description */
+    .hero-title { transform: translateY(-110px); }
+    .hero-description { transform: translateY(-105px); }
+    .hero-cta { transform: translateY(-100px); }
 }
