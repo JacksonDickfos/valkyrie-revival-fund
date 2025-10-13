@@ -237,7 +237,7 @@ body {
     text-align: center;
     width: 100%;
     gap: 1.5rem;
-    transform: translateY(30px);
+    transform: translateY(40px);
 }.hero-title {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
@@ -270,14 +270,14 @@ body {
     margin-bottom: 0.5rem;
     color: var(--pp-charcoal);
     line-height: 1.7;
-    transform: translateY(-180px);
+    transform: translateY(-170px);
     max-width: 600px;
 }
 .hero-cta {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    transform: translateY(-180px);
+    transform: translateY(-170px);
     margin-top: 0.5rem;
 }
 .btn-primary, .btn-secondary {
@@ -473,7 +473,7 @@ body {
 /* Logo positioning to ensure it's above the fire */
 .logo-core-img {
     position: absolute;
-    top: 50%;
+    top: calc(50% + 10px);
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
     width: 300px;
@@ -502,7 +502,7 @@ body {
 /* Hero Tagline Animation */
 .hero-tagline {
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
