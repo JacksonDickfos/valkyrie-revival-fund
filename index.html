@@ -206,7 +206,7 @@
                         </div>
                         <div class="form-group">
                             <label for="availableCapital">Available Capital</label>
-                            <input type="number" id="availableCapital" name="availableCapital" min="0" step="1000">
+                            <input type="text" id="availableCapital" inputmode="numeric" pattern="[0-9,]*" placeholder="0">
                         </div>
                         <div class="form-group">
                             <label for="investorType">Type of Investor</label>
@@ -308,6 +308,52 @@ window.addEventListener("scroll", function() {
 })();
 </script>
 <script>
+// Format number with commas
+function formatNumberWithCommas(value) {
+    // Remove all non-digit characters
+    const numericValue = value.replace(/\D/g, '');
+    // Add commas for thousands
+    return numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+// Parse number from formatted string (remove commas)
+function parseFormattedNumber(value) {
+    return parseInt(value.replace(/,/g, '')) || 0;
+}
+
+// Handle Available Capital field formatting and arrow keys
+document.addEventListener('DOMContentLoaded', function() {
+    const availableCapitalInput = document.getElementById('availableCapital');
+    
+    if (availableCapitalInput) {
+        // Format on input
+        availableCapitalInput.addEventListener('input', function(e) {
+            const cursorPosition = this.selectionStart;
+            const oldValue = this.value;
+            const newValue = formatNumberWithCommas(oldValue);
+            
+            this.value = newValue;
+            
+            // Restore cursor position (adjust for added commas)
+            const addedCommas = (newValue.match(/,/g) || []).length - (oldValue.match(/,/g) || []).length;
+            this.setSelectionRange(cursorPosition + addedCommas, cursorPosition + addedCommas);
+        });
+        
+        // Handle arrow keys for increment/decrement
+        availableCapitalInput.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                const currentValue = parseFormattedNumber(this.value);
+                const increment = 500000;
+                const newValue = e.key === 'ArrowUp' 
+                    ? currentValue + increment 
+                    : Math.max(0, currentValue - increment);
+                this.value = formatNumberWithCommas(newValue.toString());
+            }
+        });
+    }
+});
+
 // Handle form submission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -317,7 +363,9 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const email = formData.get('email');
     const name = formData.get('name');
     const phone = formData.get('phone');
-    const availableCapital = formData.get('availableCapital');
+    // Get numeric value from formatted input (remove commas)
+    const availableCapitalInput = document.getElementById('availableCapital');
+    const availableCapital = availableCapitalInput ? parseFormattedNumber(availableCapitalInput.value).toString() : '';
     const investorType = formData.get('investorType');
     const message = formData.get('message');
     
