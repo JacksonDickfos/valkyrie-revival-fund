@@ -619,8 +619,8 @@ body {
 }
 
 .service-icon img.service-icon-img {
-    width: 3rem;
-    height: 3rem;
+    width: 4.5rem;
+    height: 4.5rem;
     object-fit: contain;
     display: block;
     max-width: 100%;
