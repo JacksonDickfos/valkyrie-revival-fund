@@ -328,6 +328,15 @@ window.addEventListener("scroll", function() {
 </script>
 <script src="linkedin-feed.js"></script>
 <script>
+// Set dynamic copyright year
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElement = document.getElementById('copyright-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
+</script>
+<script>
 // Remove any automatically injected "Open on LinkedIn" buttons while preserving "Follow on LinkedIn"
 (function () {
     function removeOpenButtons(root) {
