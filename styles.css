@@ -721,29 +721,11 @@ body {
     font-size: 0.95rem;
 }
 
-/* Adjust grid for 3+2+1 layout - position bottom cards between top cards */
+/* Standard 3-column grid layout - two rows of three cards */
 @media (min-width: 969px) {
     /* Ensure all cards maintain same width */
     .investors-grid .investor-card {
         width: 100%;
-    }
-    
-    /* Card 4: positioned between Card 1 and Card 2 (half under each) */
-    .investors-grid .investor-card:nth-child(4) {
-        grid-column: 1 / 2;
-        transform: translateX(50%);
-    }
-    
-    /* Card 5: positioned between Card 2 and Card 3 (half under each) */
-    .investors-grid .investor-card:nth-child(5) {
-        grid-column: 2 / 3;
-        transform: translateX(50%);
-    }
-    
-    /* Card 6: centered in third row */
-    .investors-grid .investor-card:nth-child(6) {
-        grid-column: 2 / 3;
-        justify-self: center;
     }
 }
 
