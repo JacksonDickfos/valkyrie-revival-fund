@@ -1216,16 +1216,11 @@ body {
     font-size: 0.75rem;
     line-height: 1.5;
     color: #666;
-    margin-bottom: 0.5rem;
-}
-
-.footer-disclaimer p:first-child {
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-}
-
-.footer-disclaimer p:last-child {
     margin-bottom: 0;
+}
+
+.footer-disclaimer p strong {
+    font-weight: 600;
 }
 
 .social-links a {
