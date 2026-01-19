@@ -646,6 +646,120 @@ body {
 
 
 
+/* Investors Section */
+.investors {
+    padding: 6rem 0;
+    background: #FFFFFF;
+}
+
+.investors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.investor-card {
+    background: var(--pp-white);
+    border: 1px solid rgba(192, 192, 192, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.investor-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, transparent 50%, rgba(192, 192, 192, 0.1) 50%);
+    border-radius: 0 0 0 16px;
+}
+
+.investor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.investor-icon-badge {
+    width: 80px;
+    height: 80px;
+    background: #8B1A1A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    border: 2px solid #8B1A1A;
+}
+
+.investor-icon-badge i {
+    font-size: 2rem;
+    color: var(--pp-white);
+}
+
+.investor-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #8B1A1A;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.investor-card p {
+    color: var(--pp-charcoal);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Adjust grid for 3+2 layout - center the last 2 cards */
+.investors-grid .investor-card:nth-child(4) {
+    grid-column: 2;
+}
+
+.investors-grid .investor-card:nth-child(5) {
+    grid-column: 3;
+}
+
+@media (min-width: 969px) {
+    .investors-grid .investor-card:nth-child(4) {
+        grid-column: 2;
+    }
+    
+    .investors-grid .investor-card:nth-child(5) {
+        grid-column: 3;
+    }
+}
+
+@media (max-width: 968px) {
+    .investors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .investors-grid .investor-card:nth-child(4),
+    .investors-grid .investor-card:nth-child(5) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .investors-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .investors-grid .investor-card:nth-child(4),
+    .investors-grid .investor-card:nth-child(5) {
+        grid-column: span 1;
+    }
+}
+
 /* Resources Section */
 .resources {
     padding: 6rem 0;
