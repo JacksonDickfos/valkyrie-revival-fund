@@ -721,19 +721,7 @@ body {
 
 /* Adjust grid for 3+2 layout - center the last 2 cards together */
 @media (min-width: 969px) {
-    .investors-grid .investor-card:nth-child(4) {
-        grid-column: 2 / 3;
-    }
-    
-    .investors-grid .investor-card:nth-child(5) {
-        grid-column: 3 / 4;
-    }
-    
-    /* Center both cards as a group by adjusting the grid */
-    .investors-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    
+    /* Center the two bottom cards as a group */
     .investors-grid .investor-card:nth-child(4) {
         grid-column: 1 / 2;
         justify-self: end;
@@ -741,7 +729,7 @@ body {
     }
     
     .investors-grid .investor-card:nth-child(5) {
-        grid-column: 2 / 3;
+        grid-column: 3 / 4;
         justify-self: start;
         margin-left: 1rem;
     }
