@@ -719,18 +719,31 @@ body {
     font-size: 0.95rem;
 }
 
-/* Adjust grid for 3+2 layout - center the last 2 cards */
+/* Adjust grid for 3+2 layout - center the last 2 cards together */
 @media (min-width: 969px) {
     .investors-grid .investor-card:nth-child(4) {
-        grid-column: 1 / 2;
-        margin-right: auto;
-        margin-left: calc(16.666% + 1rem);
+        grid-column: 2 / 3;
     }
     
     .investors-grid .investor-card:nth-child(5) {
         grid-column: 3 / 4;
-        margin-left: auto;
-        margin-right: calc(16.666% + 1rem);
+    }
+    
+    /* Center both cards as a group by adjusting the grid */
+    .investors-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .investors-grid .investor-card:nth-child(4) {
+        grid-column: 1 / 2;
+        justify-self: end;
+        margin-right: 1rem;
+    }
+    
+    .investors-grid .investor-card:nth-child(5) {
+        grid-column: 2 / 3;
+        justify-self: start;
+        margin-left: 1rem;
     }
 }
 
