@@ -721,7 +721,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* Adjust grid for 3+2 layout - position bottom cards between top cards */
+/* Adjust grid for 3+2+1 layout - position bottom cards between top cards */
 @media (min-width: 969px) {
     /* Ensure all cards maintain same width */
     .investors-grid .investor-card {
@@ -738,6 +738,12 @@ body {
     .investors-grid .investor-card:nth-child(5) {
         grid-column: 2 / 3;
         transform: translateX(50%);
+    }
+    
+    /* Card 6: centered in third row */
+    .investors-grid .investor-card:nth-child(6) {
+        grid-column: 2 / 3;
+        justify-self: center;
     }
 }
 
