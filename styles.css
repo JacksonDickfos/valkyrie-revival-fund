@@ -1203,18 +1203,19 @@ body {
 }
 
 .footer-disclaimer {
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 1.5;
     text-align: center;
-    margin-bottom: 2rem;
-    padding: 0 2rem;
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1.5rem auto 0;
+    padding: 0 2rem;
 }
 
 .footer-disclaimer p {
     font-size: 0.75rem;
-    line-height: 1.6;
-    color: #F9F8F3;
+    line-height: 1.5;
+    color: #666;
     margin-bottom: 0.5rem;
 }
 
