@@ -672,6 +672,17 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     width: 100%;
     box-sizing: border-box;
+    cursor: pointer;
+}
+
+.investor-card .card-preview {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.6;
+    max-height: calc(1.6em * 3);
 }
 
 .investor-card::after {
