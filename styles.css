@@ -721,22 +721,23 @@ body {
     font-size: 0.95rem;
 }
 
-/* Adjust grid for 3+2 layout - position cards to overlap between top row cards */
+/* Adjust grid for 3+2 layout - position bottom cards between top cards */
 @media (min-width: 969px) {
-    /* Card 4: half under Card 1, half under Card 2 */
-    .investors-grid .investor-card:nth-child(4) {
-        grid-column: 1 / 3;
-        justify-self: center;
-        max-width: calc(33.333% - 1rem);
-        margin-left: calc(16.666%);
+    /* Ensure all cards maintain same width */
+    .investors-grid .investor-card {
+        width: 100%;
     }
     
-    /* Card 5: half under Card 2, half under Card 3 */
+    /* Card 4: positioned between Card 1 and Card 2 (half under each) */
+    .investors-grid .investor-card:nth-child(4) {
+        grid-column: 1 / 2;
+        transform: translateX(50%);
+    }
+    
+    /* Card 5: positioned between Card 2 and Card 3 (half under each) */
     .investors-grid .investor-card:nth-child(5) {
-        grid-column: 2 / 4;
-        justify-self: center;
-        max-width: calc(33.333% - 1rem);
-        margin-left: calc(-16.666%);
+        grid-column: 2 / 3;
+        transform: translateX(50%);
     }
 }
 
