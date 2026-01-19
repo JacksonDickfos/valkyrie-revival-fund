@@ -723,18 +723,16 @@ body {
 @media (min-width: 969px) {
     /* Card 4: half under Card 1, half under Card 2 */
     .investors-grid .investor-card:nth-child(4) {
-        grid-column: 1 / 3;
-        justify-self: center;
-        max-width: calc(33.333% - 1rem);
-        margin-left: calc(16.666%);
+        grid-column: 1 / 2;
+        width: calc(33.333% - 1rem);
+        transform: translateX(calc(50% + 0.5rem));
     }
     
     /* Card 5: half under Card 2, half under Card 3 */
     .investors-grid .investor-card:nth-child(5) {
-        grid-column: 2 / 4;
-        justify-self: center;
-        max-width: calc(33.333% - 1rem);
-        margin-left: calc(-16.666%);
+        grid-column: 2 / 3;
+        width: calc(33.333% - 1rem);
+        transform: translateX(calc(50% + 0.5rem));
     }
 }
 
