@@ -403,13 +403,13 @@ body {
 }
 
 .section-header p a {
-    color: #0066cc;
+    color: #0000EE;
     text-decoration: underline;
     transition: color 0.3s ease;
 }
 
 .section-header p a:hover {
-    color: #0052a3;
+    color: #0000CC;
 }
 
 .section-header p:not(:last-child) {
