@@ -402,6 +402,16 @@ body {
     color: var(--pp-charcoal);
 }
 
+.section-header p a {
+    color: var(--pp-navy-blue);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.section-header p a:hover {
+    color: #0F1A3A;
+}
+
 .section-header p:not(:last-child) {
     margin-bottom: 1rem;
 }
