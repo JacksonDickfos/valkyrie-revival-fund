@@ -200,11 +200,11 @@ body {
 
 .ecg-line {
     fill: none;
-    stroke: var(--pp-navy-blue);
+    stroke: #AA3D1D; /* Change this color to match your brand */
     stroke-width: 2.5;
     stroke-linejoin: round;
     stroke-linecap: round;
-    filter: drop-shadow(0 0 6px rgba(27, 41, 81, 0.35));
+    filter: drop-shadow(0 0 6px rgba(170, 61, 29, 0.35)); /* Adjust shadow color to match stroke */
     /* Draw-on animation */
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
