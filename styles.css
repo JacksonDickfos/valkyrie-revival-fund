@@ -21,14 +21,19 @@
 /* Brand Color Variables */
 :root {
     --pp-obsidian-olive: #2F2F21;
-    --pp-hearth-gold: #696969;
-    --pp-hearth-gold-deep: #555555;
-    --pp-soft-silver: #C0C0C0;
-    --pp-navy-blue: #1B2951;
+    --pp-hearth-gold: #D1AD5C;
+    --pp-hearth-gold-deep: #8C733D;
     --pp-temple-bronze: #574F31;
     --pp-charcoal: #262626;
     --pp-parchment: #FDFCF8;
     --pp-white: #FFFFFF;
+    --pp-deep-cream: #F3E5D0; /* deeper cream / beige */
+    --pp-offwhite-deep: #EBDAB9; /* updated off-white */
+    --pp-cream-1: #FFFBF7; /* light off-white */
+    --pp-cream-2: #F9F1E6; /* mid cream */
+    --pp-cream-3: #F3E6D6; /* deeper cream */
+    --pp-navy-blue: #1B2951; /* deep navy for investor section */
+    --pp-soft-silver: #C0C0C0;
 }
 
 /* Reset and Base Styles */
