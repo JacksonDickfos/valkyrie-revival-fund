@@ -461,6 +461,11 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.about-stats .stat:first-child .stat-number,
+.about-stats .stat:last-child .stat-number {
+    font-size: 2.0rem;
+}
+
 .stat-label {
     font-size: 0.9rem;
     color: var(--pp-charcoal);
