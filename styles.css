@@ -962,6 +962,11 @@ body {
     text-align: center;
     padding-top: 1rem;
     flex-grow: 1;
+}
+
+/* Truncate only article cards, not the Prytaneum card */
+.resources-content > .fund-links:not(:first-child) .fund-card p,
+.resources-content > .fund-links .fund-card:not(:first-child) p {
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
