@@ -675,6 +675,23 @@ body {
     background: #FFFFFF;
 }
 
+.investors-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: left;
+}
+
+.investors-intro p {
+    color: var(--pp-charcoal);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.investors-intro p:last-child {
+    margin-bottom: 0;
+}
+
 .investors-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
