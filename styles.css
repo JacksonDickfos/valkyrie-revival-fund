@@ -2040,3 +2040,684 @@ body:not(.at-top) .navbar::after {
         font-size: 1.5rem;
     }
 }
+
+
+/* Hide navbar shadow on team page */
+.team-page .navbar::after {
+    display: none !important;
+    opacity: 0 !important;
+    content: none !important;
+    height: 0 !important;
+    background: none !important;
+}
+
+
+/* CSS Variables for navbar shadow */
+:root {
+    --navbar-shadow: none;
+}
+
+/* Ensure no shadow on hero title across breakpoints */
+.hero-title { text-shadow: none; }
+
+/* Mobile-specific fixes: hide header and allow title to wrap */
+@media (max-width: 768px) {
+    .navbar {
+        display: none !important;
+    }
+
+    .hero-title {
+        white-space: normal !important; /* allow wrapping */
+        overflow-wrap: anywhere;        /* prevent overflow */
+        word-break: normal;
+        transform: none;               /* avoid clipping off-screen */
+        margin-top: calc(1.5rem + 18px); /* +10px more spacing on mobile */
+        font-size: 3rem !important;    /* mobile title size */
+        text-shadow: none !important;  /* ensure no shadow on mobile */
+    }
+
+    /* Move tagline below logo and tighten gap to title */
+    .hero-visual { margin-bottom: 0.25rem; }
+    .hero-tagline { bottom: -10px; }
+}
+
+/* Final overrides (placed late to win cascade) */
+.hero .hero-title { text-shadow: none !important; }
+
+
+/* Mobile menu styles */
+.mobile-menu {
+    display: none !important;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    border-top: 1px solid rgba(209, 173, 92, 0.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+}
+
+.mobile-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--pp-charcoal);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    background-color: rgba(209, 173, 92, 0.1);
+    color: var(--pp-hearth-gold);
+}
+
+/* Mobile hero section fixes */
+@media (max-width: 768px) {
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 20;
+}.hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    white-space: nowrap;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    transform: translateY(-180px);
+    padding: 10px 0;
+    color: #1B2951;
+    text-shadow: 0 2px 4px rgba(27, 41, 81, 0.3);
+}    
+.hero-description {
+    font-size: 1.1rem;
+    margin: 0.25rem 0; /* tighter vertical spacing */
+    color: var(--pp-charcoal);
+    line-height: 1.6;
+    transform: translateY(-180px);
+}    
+    .rotating-logo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .logo-core-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hero-tagline {
+        font-size: 0.9rem;
+        gap: 1rem;
+    }
+}
+
+
+/* Mobile hero section fixes */
+@media (max-width: 768px) {
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 20;
+}    
+.hero-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 3.5rem;
+    white-space: nowrap;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    transform: translateY(-180px);
+}    
+.hero-description {
+    font-size: 1.1rem;
+    margin: 0.25rem 0; /* tighter vertical spacing */
+    color: var(--pp-charcoal);
+    line-height: 1.6;
+    transform: translateY(-180px);
+}    
+    .rotating-logo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .logo-core-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hero-tagline {
+        font-size: 0.9rem;
+        gap: 1rem;
+    }
+}
+
+/* Section header colors for Services and Contact */
+.services .section-header h2,
+.contact .section-header h2 {
+    color: #4F555A;
+}
+
+/* Clickable Our Activity cards */
+.fund-card,
+.linkedin-placeholder {
+    cursor: pointer;
+}
+
+/* Card link styling */
+.card-link {
+    color: #AA3D1D;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover {
+    color: #8F3218;
+    text-decoration: underline;
+}
+.fund-card:focus,
+.linkedin-placeholder:focus {
+    outline: 2px solid rgba(27, 41, 81, 0.4);
+    outline-offset: 2px;
+}
+
+/* Ensure hero tagline words color */
+.hero .hero-tagline .tagline-word {
+    color: #4F555A !important;
+}
+
+/* Hero CTA button color override */
+.hero .btn-primary {
+    background: #AA3D1D;
+    color: #FFFFFF !important;
+}
+
+.hero .btn-primary:hover {
+    background: #8F3218;
+    color: #FFFFFF !important;
+}
+
+/* Footer gold sheen text (match logo) */
+.footer .company-name,
+.footer .company-slogan,
+.footer .footer-nav a {
+    background: linear-gradient(90deg, var(--pp-hearth-gold) 0%, var(--pp-hearth-gold-deep) 50%, var(--pp-hearth-gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.footer .footer-nav a:hover {
+    background: linear-gradient(90deg, var(--pp-hearth-gold-deep) 0%, var(--pp-hearth-gold) 50%, var(--pp-hearth-gold-deep) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Team Section */
+.team {
+    padding: 6rem 0 8rem 0;
+    background: var(--pp-white) !important;
+    min-height: 80vh;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.team * {
+    box-shadow: none !important;
+}
+
+.team *::before,
+.team *::after {
+    display: none !important;
+    content: none !important;
+    box-shadow: none !important;
+}
+
+.team::before,
+.team::after {
+    display: none !important;
+    content: none !important;
+}
+
+.team .container {
+    border: none !important;
+    box-shadow: none !important;
+    max-width: 1320px; /* allow 3 wider cards in first row */
+}
+
+.team .container::before,
+.team .container::after {
+    display: none !important;
+    content: none !important;
+}
+
+.team .section-header {
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    margin-bottom: 2rem !important;
+    padding-bottom: 0 !important;
+}
+
+.team .section-header h2::after,
+.team .section-header p::after {
+    display: none !important;
+    content: none !important;
+}
+
+.team .section-header::before,
+.team .section-header::after {
+    display: none !important;
+    content: none !important;
+}
+
+.team .section-header h2 {
+    color: #4F555A;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center each row; last row with 2 cards centers automatically */
+    gap: 2.5rem;
+    margin-top: 0 !important;
+    margin-bottom: 2rem;
+    border: none !important;
+    box-shadow: none !important;
+    padding-top: 0 !important;
+}
+
+.team-grid::before,
+.team-grid::after {
+    display: none !important;
+    content: none !important;
+}
+
+.team-card {
+    background: var(--pp-parchment);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(209, 173, 92, 0.2);
+    box-shadow: none !important;
+    position: relative;
+    z-index: 1;
+    width: 380px;       /* slightly wider cards to avoid awkward wrapping */
+    flex: 0 0 380px;    /* fixed width per card so all are identical */
+}
+
+.team-card::before,
+.team-card::after {
+    display: none !important;
+    content: none !important;
+    box-shadow: none !important;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: none !important;
+    border-color: rgba(209, 173, 92, 0.4);
+    z-index: 2;
+}
+
+.team-photo {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--pp-hearth-gold);
+    background: var(--pp-deep-cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Animated gold sheen border - visible rotating shimmer */
+.team-photo::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 8px;
+    height: 20px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #F5D896,
+        var(--pp-hearth-gold),
+        #F5D896,
+        transparent
+    );
+    border-radius: 4px;
+    transform-origin: center 94px;
+    animation: rotateSheen 3s linear infinite;
+    z-index: 10;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(245, 216, 150, 0.8);
+}
+
+@keyframes rotateSheen {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1 !important;
+    filter: none !important;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+/* Fix Ian Miller's image positioning */
+.team-photo img.ian-miller-photo {
+    object-position: 30% 15% !important;
+    object-fit: cover;
+    transform: scale(1.6) translateX(-7px);
+}
+
+
+/* Team badge logo - positioned outside the photo circle, relative to team-card */
+.team-badge {
+    position: absolute;
+    top: calc(180px + 1.5rem - 50px - 10px);
+    right: calc(50% - 90px - 10px);
+    width: 50px;
+    height: 50px;
+    background: var(--pp-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--pp-hearth-gold);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+    z-index: 30;
+}
+
+.team-badge .badge-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+.team-info h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: var(--pp-charcoal);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.team-title {
+    font-size: 1rem;
+    color: var(--pp-hearth-gold-deep);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.team-role {
+    font-size: 0.9rem;
+    color: var(--pp-charcoal);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.team-description {
+    font-size: 0.95rem;
+    color: var(--pp-charcoal);
+    line-height: 1.6;
+    text-align: center; /* center the 3-line preview text on each card */
+}
+
+.team-description-container {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.team-card[data-member] {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card[data-member]:hover {
+    transform: translateY(-8px);
+}
+
+@media (min-width: 1024px) {
+    .team-role {
+        white-space: nowrap;
+    }
+}
+
+/* Team Modal Styles */
+.team-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-modal.active {
+    display: flex;
+}
+
+.team-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.team-modal-content {
+    position: relative;
+    background: var(--pp-white);
+    border-radius: 12px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    z-index: 10001;
+    margin: 20px;
+}
+
+.team-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--pp-charcoal);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease, color 0.3s ease;
+    z-index: 10002;
+}
+
+.team-modal-close:hover {
+    background: var(--pp-deep-cream);
+    color: var(--pp-hearth-gold-deep);
+}
+
+.team-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem 2.5rem 2rem;
+    border-bottom: 1px solid var(--pp-deep-cream);
+}
+
+.team-modal-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--pp-hearth-gold);
+    flex-shrink: 0;
+}
+
+.team-modal-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-modal-info {
+    flex: 1;
+}
+
+.team-modal-info h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.75rem;
+    color: var(--pp-charcoal);
+    margin-bottom: 0.5rem;
+}
+
+.team-modal-title {
+    font-size: 1rem;
+    color: var(--pp-hearth-gold-deep);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.team-modal-role {
+    font-size: 0.95rem;
+    color: var(--pp-charcoal);
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.team-modal-body {
+    padding: 2rem 2.5rem 2.5rem;
+}
+
+.team-modal-description {
+    font-size: 1rem;
+    color: var(--pp-charcoal);
+    line-height: 1.8;
+    text-align: left;
+}
+
+.team-modal-description .team-description {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    text-align: left; /* ensure modal paragraphs are left-aligned even though card snippets are centered */
+}
+
+.team-modal-description .team-description:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .team-photo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .team-card {
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 360px;
+        flex: 0 0 auto;
+    }
+    
+    .team-modal-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2rem 1.5rem 1.5rem;
+    }
+    
+    .team-modal-content {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    .team-modal-body {
+        padding: 1.5rem;
+    }
+    
+    .team-modal-info h2 {
+        font-size: 1.5rem;
+    }
+}
