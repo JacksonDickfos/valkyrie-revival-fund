@@ -981,7 +981,6 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: calc(1.6em * 4);
 }
 
 .fund-card a {
