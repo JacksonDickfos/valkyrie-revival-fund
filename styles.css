@@ -982,8 +982,7 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-top: 0;
-    margin-top: 0;
+    padding-top: 1rem;
 }
 
 .linkedin-placeholder p {
@@ -991,8 +990,7 @@ body {
     margin-bottom: 1.5rem;
     line-height: 1.6;
     text-align: center;
-    padding-top: 0;
-    margin-top: 0;
+    padding-top: 1rem;
     flex-grow: 1;
     display: -webkit-box;
     -webkit-line-clamp: 4;
