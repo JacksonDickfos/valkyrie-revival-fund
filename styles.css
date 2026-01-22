@@ -835,10 +835,19 @@ body {
 }
 
 /* Ensure all activity cards have the same height */
-.resources-content .fund-links,
-.resources-content .linkedin-embed {
+.resources-content > .fund-links,
+.resources-content > .linkedin-embed {
     display: flex;
+    flex-direction: column;
     height: 100%;
+}
+
+.resources-content > .fund-links > .card-link,
+.resources-content > .linkedin-embed > .card-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
 }
 
 .resources-content .fund-card,
