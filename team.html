@@ -191,22 +191,13 @@
     </footer>
 
 <script>
-// Set current year in footer
-(function() {
-    function updateYear() {
-        var yearElement = document.getElementById('footer-year');
-        if (yearElement) {
-            yearElement.textContent = new Date().getFullYear();
-        }
+// Set dynamic copyright year
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElement = document.getElementById('copyright-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
     }
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', updateYear);
-    } else {
-        updateYear();
-    }
-    setTimeout(updateYear, 0);
-    setTimeout(updateYear, 100);
-})();
+});
 </script>
 <script>
 // Simple scroll handler using CSS variables
