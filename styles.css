@@ -1018,6 +1018,16 @@ body {
     flex-grow: 1;
 }
 
+/* Ensure card 1 (Prytaneum card) doesn't get truncated - show full text */
+.resources-content > .fund-links:first-child .fund-card p {
+    display: block !important;
+    -webkit-line-clamp: none !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    max-height: none !important;
+    -webkit-box-orient: initial !important;
+}
+
 /* Truncate only article cards (card 3), not the Prytaneum card (card 1) */
 .resources-content > .fund-links:not(:first-child) .fund-card p {
     display: -webkit-box;
@@ -1040,6 +1050,7 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-height: calc(1.6em * 4);
 }
 
 .fund-card a {
