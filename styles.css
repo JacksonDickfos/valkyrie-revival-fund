@@ -1070,18 +1070,24 @@ body {
     margin-top: auto;
 }
 
-/* Ensure all images in activity cards have consistent height */
+/* Ensure all images in activity cards have consistent height and positioning */
 .resources-content img {
     height: 200px;
     object-fit: cover;
     width: 100%;
     margin: 1rem 0;
     border-radius: 8px;
+    display: block;
 }
 
-/* First card (Valkyrie Revival Fund) - show full image */
+/* First card (Prytaneum logo) - use same sizing as other cards but contain to show full logo */
 .resources-content > .fund-links:first-child .fund-card img {
+    height: 200px;
     object-fit: contain;
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 8px;
+    display: block;
 }
 
 /* Valkyrie Revival Fund Section */
