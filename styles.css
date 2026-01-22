@@ -1093,9 +1093,12 @@ body {
     height: 200px;
     object-fit: cover;
     width: 100%;
-    margin: 1rem 0;
+    margin: 0 0 1rem 0 !important;
     border-radius: 8px;
     display: block;
+    order: -1;
+    flex-shrink: 0;
+    align-self: flex-start;
 }
 
 /* First card (Prytaneum logo) - use same sizing as other cards but contain to show full logo */
@@ -1103,9 +1106,12 @@ body {
     height: 200px;
     object-fit: contain;
     width: 100%;
-    margin: 1rem 0;
+    margin: 0 0 1rem 0 !important;
     border-radius: 8px;
     display: block;
+    order: -1;
+    flex-shrink: 0;
+    align-self: flex-start;
 }
 
 /* Valkyrie Revival Fund Section */
