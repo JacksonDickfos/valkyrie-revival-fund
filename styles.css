@@ -1026,12 +1026,21 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.resources-content > .fund-links:first-child > .card-link {
+    margin: 0;
+    padding: 0;
 }
 
 .resources-content > .fund-links:first-child .fund-card {
     height: 100%;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding-top: 2rem;
 }
 
 .resources-content > .fund-links:first-child .fund-card img {
