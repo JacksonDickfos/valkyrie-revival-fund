@@ -1028,11 +1028,13 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    gap: 0;
 }
 
 .resources-content > .fund-links:first-child > .card-link {
     margin: 0;
     padding: 0;
+    display: block;
 }
 
 .resources-content > .fund-links:first-child .fund-card {
@@ -1040,7 +1042,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding-top: 2rem;
+    padding: 2rem;
 }
 
 .resources-content > .fund-links:first-child .fund-card img {
