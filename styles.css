@@ -2278,13 +2278,19 @@ body:not(.at-top) .navbar::after {
 
 /* Footer silver sheen text */
 .footer .company-name,
-.footer .company-slogan,
+.footer .company-slogan {
+    background: linear-gradient(90deg, #B8B8B8, #E2E2E2, #9A9A9A, #E2E2E2, #B8B8B8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 .footer .footer-nav a {
-    color: #9B8A66;
+    color: #4F555A;
 }
 
 .footer .footer-nav a:hover {
-    color: var(--pp-hearth-gold);
+    color: #9B8A66;
 }
 
 /* Team Section */
