@@ -2348,6 +2348,7 @@ body:not(.at-top) .navbar::after {
     border: none !important;
     box-shadow: none !important;
     max-width: 1320px; /* allow 3 wider cards in first row */
+    padding-bottom: 4rem;
 }
 
 .team .container::before,
