@@ -1027,11 +1027,12 @@ body {
 /* Ensure card 1 (Prytaneum card) doesn't get truncated - show full text */
 .resources-content > .fund-links:first-child .fund-card p {
     display: block !important;
-    -webkit-line-clamp: none !important;
+    -webkit-line-clamp: unset !important;
     overflow: visible !important;
     text-overflow: clip !important;
     max-height: none !important;
-    -webkit-box-orient: initial !important;
+    -webkit-box-orient: unset !important;
+    -webkit-box: unset !important;
 }
 
 /* Truncate only article cards (card 3), not the Prytaneum card (card 1) */
