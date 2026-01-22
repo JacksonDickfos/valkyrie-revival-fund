@@ -2319,7 +2319,7 @@ body:not(.at-top) .navbar::after {
 
 /* Team Section */
 .team {
-    padding: 6rem 0 8rem 0;
+    padding: 6rem 0 12rem 0;
     background: var(--pp-white) !important;
     min-height: 80vh;
     border: none !important;
