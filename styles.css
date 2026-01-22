@@ -2387,7 +2387,7 @@ body:not(.at-top) .navbar::after {
     justify-content: center; /* center each row; last row with 2 cards centers automatically */
     gap: 2.5rem;
     margin-top: 0 !important;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     border: none !important;
     box-shadow: none !important;
     padding-top: 0 !important;
