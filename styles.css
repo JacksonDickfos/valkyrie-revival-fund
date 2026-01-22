@@ -19,7 +19,7 @@
 
 .linked-text {
     color: var(--pp-navy-blue) !important;
-    text-decoration: none !important;
+    text-decoration: underline !important;
     cursor: pointer;
     font-weight: 600 !important;
     transition: color 0.3s ease;
@@ -835,11 +835,18 @@ body {
 }
 
 /* Ensure all activity cards have the same height */
+.resources-content .fund-links,
+.resources-content .linkedin-embed {
+    display: flex;
+    height: 100%;
+}
+
 .resources-content .fund-card,
 .resources-content .linkedin-placeholder {
     height: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .linkedin-embed, .fund-links {
