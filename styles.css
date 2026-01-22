@@ -1013,6 +1013,8 @@ body {
 .fund-card img {
     order: -1;
     flex-shrink: 0;
+    align-self: flex-start;
+    width: 100%;
 }
 
 .fund-card p {
