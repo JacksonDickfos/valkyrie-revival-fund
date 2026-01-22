@@ -9,10 +9,10 @@
 }
 
 .linked-text {
-    color: var(--pp-navy-blue);
-    text-decoration: underline;
+    color: var(--pp-charcoal);
+    text-decoration: none;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: normal;
 }
 
 .linked-text:hover {
