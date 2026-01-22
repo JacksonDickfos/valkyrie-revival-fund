@@ -626,7 +626,7 @@ body {
 
 .service-card:hover {
     transform: translateY(-27.5px);
-    border-color: var(--pp-hearth-gold);
+    border-color: var(--pp-navy-blue);
     box-shadow: 0 10px 30px rgba(192, 192, 192, 0.2);
 }
 
@@ -741,7 +741,7 @@ body {
 
 .investor-card:hover {
     transform: translateY(-27.5px);
-    border-color: var(--pp-hearth-gold);
+    border-color: var(--pp-navy-blue);
     box-shadow: 0 10px 30px rgba(192, 192, 192, 0.2);
 }
 
@@ -892,7 +892,7 @@ body {
 
 .linkedin-placeholder:hover {
     transform: translateY(-27.5px);
-    border-color: var(--pp-hearth-gold);
+    border-color: var(--pp-navy-blue);
     box-shadow: 0 10px 30px rgba(192, 192, 192, 0.2);
 }
 
@@ -952,7 +952,7 @@ body {
 
 .fund-card:hover {
     transform: translateY(-27.5px);
-    border-color: var(--pp-hearth-gold);
+    border-color: var(--pp-navy-blue);
     box-shadow: 0 10px 30px rgba(192, 192, 192, 0.2);
 }
 
