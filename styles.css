@@ -983,6 +983,8 @@ body {
     flex-direction: column;
     min-height: 300px;
     height: 100%;
+    align-items: stretch;
+    justify-content: flex-start;
 }
 
 .fund-card::before {
