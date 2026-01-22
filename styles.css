@@ -3,14 +3,6 @@
     display: block;
 }
 
-/* Make card-link flex when inside resources-content to allow height stretching */
-.resources-content .card-link {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    flex: 1;
-    min-height: 0;
-}
 
 .card-link .fund-card,
 .card-link .linkedin-placeholder {
@@ -843,41 +835,6 @@ body {
     align-items: stretch;
 }
 
-/* Ensure all activity cards have the same height */
-.resources-content > .fund-links,
-.resources-content > .linkedin-embed {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.resources-content > .fund-links > .card-link,
-.resources-content > .linkedin-embed > .card-link {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    flex: 1;
-}
-
-.resources-content .fund-card,
-.resources-content .linkedin-placeholder {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-height: 0;
-}
-
-/* Card 1 should allow overflow for full text display */
-.resources-content > .fund-links:first-child .fund-card {
-    overflow: visible;
-}
-
-/* Cards 2 and 3 can have hidden overflow for truncation */
-.resources-content > .linkedin-embed .linkedin-placeholder,
-.resources-content > .fund-links:not(:first-child) .fund-card {
-    overflow: hidden;
-}
 
 .linkedin-embed, .fund-links {
     color: var(--pp-charcoal);
@@ -933,8 +890,6 @@ body {
     flex-direction: column;
     min-height: 300px;
     height: 100%;
-    align-items: stretch;
-    justify-content: flex-start;
 }
 
 .linkedin-placeholder::before {
@@ -969,7 +924,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: 100%;
 }
 
 .fund-card {
@@ -985,8 +939,6 @@ body {
     flex-direction: column;
     min-height: 300px;
     height: 100%;
-    align-items: stretch;
-    justify-content: flex-start;
 }
 
 .fund-card::before {
@@ -1014,54 +966,24 @@ body {
     margin-bottom: 1rem;
 }
 
-.fund-card img {
-    order: 0 !important;
-    flex-shrink: 0 !important;
-    width: 100% !important;
-    margin: 0 0 1rem 0 !important;
-    display: block !important;
-}
-
-.linkedin-placeholder img {
-    order: 0 !important;
-    flex-shrink: 0 !important;
-    width: 100% !important;
-    margin: 0 0 1rem 0 !important;
-    display: block !important;
-}
-
 .fund-card p {
     color: var(--pp-charcoal);
     margin-bottom: 1.5rem;
     line-height: 1.6;
     text-align: center;
-    padding-top: 0;
+    padding-top: 1rem;
     flex-grow: 1;
-    order: 1;
 }
 
-/* Card 1 (Prytaneum card) - show full text, no truncation */
-.resources-content > .fund-links:first-child .fund-card p {
-    display: block !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
-    max-height: none !important;
-    -webkit-line-clamp: unset !important;
-    -webkit-box-orient: unset !important;
-    -webkit-box: unset !important;
-}
-
-/* Card 3 (article card) - truncate at 4 lines */
+/* Truncate only article cards (card 3), not the Prytaneum card (card 1) */
 .resources-content > .fund-links:not(:first-child) .fund-card p {
-    display: -webkit-box !important;
-    -webkit-line-clamp: 4 !important;
-    -webkit-box-orient: vertical !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    max-height: calc(1.6em * 4) !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* Card 2 (linkedin placeholder) - truncate at 4 lines */
 .linkedin-placeholder p {
     color: var(--pp-charcoal);
     margin-bottom: 1.5rem;
@@ -1069,12 +991,11 @@ body {
     text-align: center;
     padding-top: 1rem;
     flex-grow: 1;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 4 !important;
-    -webkit-box-orient: vertical !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    max-height: calc(1.6em * 4) !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .fund-card a {
@@ -1091,28 +1012,18 @@ body {
     margin-top: auto;
 }
 
-/* Ensure all images in activity cards have consistent height and positioning */
+/* Ensure all images in activity cards have consistent height */
 .resources-content img {
-    height: 200px !important;
+    height: 200px;
     object-fit: cover;
-    width: 100% !important;
-    margin: 0 0 1rem 0 !important;
+    width: 100%;
+    margin: 1rem 0;
     border-radius: 8px;
-    display: block !important;
-    order: 0 !important;
-    flex-shrink: 0 !important;
 }
 
-/* First card (Prytaneum logo) - use same sizing as other cards but contain to show full logo */
+/* First card (Valkyrie Revival Fund) - show full image */
 .resources-content > .fund-links:first-child .fund-card img {
-    height: 200px !important;
-    object-fit: contain !important;
-    width: 100% !important;
-    margin: 0 0 1rem 0 !important;
-    border-radius: 8px;
-    display: block !important;
-    order: 0 !important;
-    flex-shrink: 0 !important;
+    object-fit: contain;
 }
 
 /* Valkyrie Revival Fund Section */
