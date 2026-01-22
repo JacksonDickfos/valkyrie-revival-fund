@@ -8,6 +8,15 @@
     cursor: pointer;
 }
 
+/* Ensure card-link doesn't affect text styling inside cards */
+.card-link p,
+.card-link .fund-card p,
+.card-link .linkedin-placeholder p {
+    text-decoration: none !important;
+    font-weight: normal !important;
+    color: var(--pp-charcoal) !important;
+}
+
 .linked-text {
     color: var(--pp-charcoal);
     text-decoration: none;
