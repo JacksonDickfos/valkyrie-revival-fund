@@ -1011,21 +1011,19 @@ body {
 }
 
 .fund-card img {
-    order: -1;
-    flex-shrink: 0;
-    align-self: flex-start;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    order: 0 !important;
+    flex-shrink: 0 !important;
+    width: 100% !important;
+    margin: 0 0 1rem 0 !important;
+    display: block !important;
 }
 
 .linkedin-placeholder img {
-    order: -1;
-    flex-shrink: 0;
-    align-self: flex-start;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    order: 0 !important;
+    flex-shrink: 0 !important;
+    width: 100% !important;
+    margin: 0 0 1rem 0 !important;
+    display: block !important;
 }
 
 .fund-card p {
@@ -1033,8 +1031,9 @@ body {
     margin-bottom: 1.5rem;
     line-height: 1.6;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0;
     flex-grow: 1;
+    order: 1;
 }
 
 /* Card 1 (Prytaneum card) - show full text, no truncation */
@@ -1090,28 +1089,26 @@ body {
 
 /* Ensure all images in activity cards have consistent height and positioning */
 .resources-content img {
-    height: 200px;
+    height: 200px !important;
     object-fit: cover;
-    width: 100%;
+    width: 100% !important;
     margin: 0 0 1rem 0 !important;
     border-radius: 8px;
-    display: block;
-    order: -1;
-    flex-shrink: 0;
-    align-self: flex-start;
+    display: block !important;
+    order: 0 !important;
+    flex-shrink: 0 !important;
 }
 
 /* First card (Prytaneum logo) - use same sizing as other cards but contain to show full logo */
 .resources-content > .fund-links:first-child .fund-card img {
-    height: 200px;
-    object-fit: contain;
-    width: 100%;
+    height: 200px !important;
+    object-fit: contain !important;
+    width: 100% !important;
     margin: 0 0 1rem 0 !important;
     border-radius: 8px;
-    display: block;
-    order: -1;
-    flex-shrink: 0;
-    align-self: flex-start;
+    display: block !important;
+    order: 0 !important;
+    flex-shrink: 0 !important;
 }
 
 /* Valkyrie Revival Fund Section */
