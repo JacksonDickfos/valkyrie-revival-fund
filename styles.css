@@ -2243,17 +2243,7 @@ body:not(.at-top) .navbar::after {
 }
 
 /* Card link styling */
-.card-link {
-    color: #AA3D1D;
-    text-decoration: underline;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.card-link:hover {
-    color: #8F3218;
-    text-decoration: underline;
-}
+/* Removed duplicate card-link styling that was causing bold/underline on card text */
 .fund-card:focus,
 .linkedin-placeholder:focus {
     outline: 2px solid rgba(27, 41, 81, 0.4);
