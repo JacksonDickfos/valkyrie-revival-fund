@@ -9,6 +9,7 @@
     flex-direction: column;
     height: 100%;
     flex: 1;
+    min-height: 0;
 }
 
 .card-link .fund-card,
@@ -865,6 +866,7 @@ body {
     flex-direction: column;
     flex: 1;
     min-height: 0;
+    overflow: hidden;
 }
 
 .linkedin-embed, .fund-links {
