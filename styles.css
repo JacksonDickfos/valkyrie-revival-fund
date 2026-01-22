@@ -2442,7 +2442,7 @@ body:not(.at-top) .navbar::after {
     position: relative;
 }
 
-/* Animated gold sheen border - visible rotating shimmer */
+/* Animated silver sheen border - visible rotating shimmer */
 .team-photo::before {
     content: '';
     position: absolute;
@@ -2453,9 +2453,9 @@ body:not(.at-top) .navbar::after {
     background: linear-gradient(
         to bottom,
         transparent,
-        #F5D896,
-        var(--pp-hearth-gold),
-        #F5D896,
+        #E2E2E2,
+        #B8B8B8,
+        #E2E2E2,
         transparent
     );
     border-radius: 4px;
@@ -2463,7 +2463,7 @@ body:not(.at-top) .navbar::after {
     animation: rotateSheen 3s linear infinite;
     z-index: 10;
     pointer-events: none;
-    box-shadow: 0 0 10px rgba(245, 216, 150, 0.8);
+    box-shadow: 0 0 10px rgba(184, 184, 184, 0.5);
 }
 
 @keyframes rotateSheen {
