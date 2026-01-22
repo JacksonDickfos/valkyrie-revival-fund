@@ -866,6 +866,16 @@ body {
     flex-direction: column;
     flex: 1;
     min-height: 0;
+}
+
+/* Card 1 should allow overflow for full text display */
+.resources-content > .fund-links:first-child .fund-card {
+    overflow: visible;
+}
+
+/* Cards 2 and 3 can have hidden overflow for truncation */
+.resources-content > .linkedin-embed .linkedin-placeholder,
+.resources-content > .fund-links:not(:first-child) .fund-card {
     overflow: hidden;
 }
 
@@ -1024,25 +1034,25 @@ body {
     flex-grow: 1;
 }
 
-/* Ensure card 1 (Prytaneum card) doesn't get truncated - show full text */
+/* Card 1 (Prytaneum card) - show full text, no truncation */
 .resources-content > .fund-links:first-child .fund-card p {
     display: block !important;
-    -webkit-line-clamp: unset !important;
     overflow: visible !important;
     text-overflow: clip !important;
     max-height: none !important;
+    -webkit-line-clamp: unset !important;
     -webkit-box-orient: unset !important;
     -webkit-box: unset !important;
 }
 
-/* Truncate only article cards (card 3), not the Prytaneum card (card 1) */
+/* Card 3 (article card) - truncate at 4 lines */
 .resources-content > .fund-links:not(:first-child) .fund-card p {
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-height: calc(1.6em * 4);
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-height: calc(1.6em * 4) !important;
 }
 
 .linkedin-placeholder p {
