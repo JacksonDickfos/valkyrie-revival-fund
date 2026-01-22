@@ -1015,6 +1015,17 @@ body {
     flex-shrink: 0;
     align-self: flex-start;
     width: 100%;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.linkedin-placeholder img {
+    order: -1;
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 .fund-card p {
