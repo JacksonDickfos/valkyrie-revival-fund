@@ -2319,7 +2319,7 @@ body:not(.at-top) .navbar::after {
 
 /* Team Section */
 .team {
-    padding: 6rem 0 12rem 0;
+    padding: 6rem 0 16rem 0;
     background: var(--pp-white) !important;
     min-height: 80vh;
     border: none !important;
@@ -2348,7 +2348,7 @@ body:not(.at-top) .navbar::after {
     border: none !important;
     box-shadow: none !important;
     max-width: 1320px; /* allow 3 wider cards in first row */
-    padding-bottom: 4rem;
+    padding-bottom: 6rem;
 }
 
 .team .container::before,
@@ -2388,7 +2388,7 @@ body:not(.at-top) .navbar::after {
     justify-content: center; /* center each row; last row with 2 cards centers automatically */
     gap: 2.5rem;
     margin-top: 0 !important;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
     border: none !important;
     box-shadow: none !important;
     padding-top: 0 !important;
