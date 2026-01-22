@@ -18,16 +18,16 @@
 }
 
 .linked-text {
-    color: var(--pp-navy-blue);
-    text-decoration: none;
+    color: var(--pp-navy-blue) !important;
+    text-decoration: none !important;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 600 !important;
     transition: color 0.3s ease;
 }
 
 .linked-text:hover {
-    color: #0F1A3A;
-    text-decoration: underline;
+    color: #0F1A3A !important;
+    text-decoration: underline !important;
 }
 
 .linked-text:hover {
