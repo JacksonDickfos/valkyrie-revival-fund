@@ -1040,6 +1040,7 @@ body {
     max-height: calc(1.6em * 4) !important;
 }
 
+/* Card 2 (linkedin placeholder) - truncate at 4 lines */
 .linkedin-placeholder p {
     color: var(--pp-charcoal);
     margin-bottom: 1.5rem;
@@ -1047,12 +1048,12 @@ body {
     text-align: center;
     padding-top: 1rem;
     flex-grow: 1;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-height: calc(1.6em * 4);
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-height: calc(1.6em * 4) !important;
 }
 
 .fund-card a {
