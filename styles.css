@@ -971,7 +971,8 @@ body {
     margin-bottom: 1.5rem;
     line-height: 1.6;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0;
+    margin-top: 1rem;
     flex-grow: 1;
 }
 
@@ -989,7 +990,8 @@ body {
     margin-bottom: 1.5rem;
     line-height: 1.6;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0;
+    margin-top: 1rem;
     flex-grow: 1;
     display: -webkit-box;
     -webkit-line-clamp: 4;
@@ -1012,18 +1014,24 @@ body {
     margin-top: auto;
 }
 
-/* Ensure all images in activity cards have consistent height */
+/* Ensure all images in activity cards have consistent height and positioning */
 .resources-content img {
     height: 200px;
     object-fit: cover;
     width: 100%;
-    margin: 1rem 0;
+    margin: 0;
     border-radius: 8px;
+    display: block;
 }
 
 /* First card (Valkyrie Revival Fund) - show full image */
 .resources-content > .fund-links:first-child .fund-card img {
     object-fit: contain;
+    height: 200px;
+    width: 100%;
+    margin: 0;
+    border-radius: 8px;
+    display: block;
 }
 
 /* Valkyrie Revival Fund Section */
