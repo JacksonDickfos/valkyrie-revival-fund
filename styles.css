@@ -3,6 +3,13 @@
     display: block;
 }
 
+/* Make card-link flex when inside resources-content to allow height stretching */
+.resources-content .card-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .card-link .fund-card,
 .card-link .linkedin-placeholder {
     cursor: pointer;
