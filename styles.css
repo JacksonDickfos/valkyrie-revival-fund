@@ -1021,9 +1021,25 @@ body {
     border-radius: 8px;
 }
 
-/* First card (Valkyrie Revival Fund) - show full image */
+/* First card (Valkyrie Revival Fund) - show full image and ensure alignment */
+.resources-content > .fund-links:first-child {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.resources-content > .fund-links:first-child .fund-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .resources-content > .fund-links:first-child .fund-card img {
     object-fit: contain;
+    height: 200px;
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 8px;
 }
 
 /* Valkyrie Revival Fund Section */
