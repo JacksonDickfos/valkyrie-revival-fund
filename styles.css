@@ -498,7 +498,7 @@ body {
     color: var(--pp-charcoal);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: auto;
+    margin-top: 0.5rem;
     padding-bottom: 0;
 }
 
