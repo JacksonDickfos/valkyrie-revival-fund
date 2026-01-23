@@ -2618,6 +2618,24 @@ body:not(.at-top) .navbar::after {
     margin: 20px;
 }
 
+.team-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.team-modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.team-modal-content::-webkit-scrollbar-thumb {
+    background: #B8B8B8;
+    border-radius: 4px;
+}
+
+.team-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #9A9A9A;
+}
+
 .team-modal-close {
     position: absolute;
     top: 20px;
