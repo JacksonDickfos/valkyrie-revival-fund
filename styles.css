@@ -2401,7 +2401,7 @@ body:not(.at-top) .navbar::after {
 }
 
 .team-card {
-    background: #F5F5F5;
+    background: #FAFAFA;
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
