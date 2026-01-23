@@ -2424,7 +2424,7 @@ body:not(.at-top) .navbar::after {
 .team-card:hover {
     transform: translateY(-8px);
     box-shadow: none !important;
-    border-color: rgba(209, 173, 92, 0.4);
+    border-color: var(--pp-navy-blue);
     z-index: 2;
 }
 
@@ -2533,7 +2533,7 @@ body:not(.at-top) .navbar::after {
 
 .team-title {
     font-size: 1rem;
-    color: var(--pp-navy-blue);
+    color: #666666;
     font-weight: 600;
     margin-bottom: 0.5rem;
     line-height: 1.4;
