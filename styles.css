@@ -451,6 +451,7 @@ body {
     align-items: center;
     justify-items: center;
     text-align: center;
+    margin-top: -2rem;
 }
 
 .about-text p {
@@ -458,6 +459,10 @@ body {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     line-height: 1.7;
+}
+
+.about-text p:first-child {
+    margin-top: 0;
 }
 
 .about-stats {
