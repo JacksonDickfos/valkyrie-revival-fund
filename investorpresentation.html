@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Presentation - Valkyrie Revival Fund</title>
+    <link rel="icon" type="image/png" href="images/back-helmet.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html#about">Who We Are</a></li>
+                <li><a href="index.html#services">What We Do</a></li>
+                <li><a href="index.html#investors">What Our Investors Get</a></li>
+                <li><a href="index.html#resources">Our Activity</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="index.html#contact">Get In Touch</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="index.html#about">Who We Are</a></li>
+                    <li><a href="index.html#services">What We Do</a></li>
+                    <li><a href="index.html#investors">What Our Investors Get</a></li>
+                    <li><a href="index.html#resources">Our Activity</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="index.html#contact">Get In Touch</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Investor Presentation Section -->
+    <section id="investor-presentation" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Valkyrie Revival Fund — Investor Presentation</h2>
+                <p>This presentation is available to prospective investors.<br>Please provide your details to access the material.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <div class="form-card">
+                        <form id="investorPresentationForm">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary">Download Presentation</button>
+                            </div>
+                        </form>
+                        <div id="successMessage" class="success-message" style="display: none;">
+                            <h3>Thank you!</h3>
+                            <p>Your request has been submitted successfully. You will receive an email with the presentation shortly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/back-helmet.png" alt="Valkyrie Revival Fund Logo" class="footer-logo-img">
+                    <div class="logo-text">
+                        <span class="company-name">Valkyrie Revival Fund</span>
+                        <span class="company-slogan">Revive. Scale. Thrive.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html#about">Who We Are</a>
+                <a href="index.html#services">What We Do</a>
+                <a href="index.html#investors">What Our Investors Get</a>
+                <a href="index.html#resources">Our Activity</a>
+                <a href="team.html">Our Team</a>
+                <a href="index.html#contact">Get In Touch</a>
+            </div>
+            <div class="footer-social">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/prytaneum-partners" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <p><strong>Website Disclaimer:</strong> The information presented on this website is provided for general informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities. Any investment strategy or structural features described herein reflect current intentions and design considerations and are subject to change. Actual results, performance, and outcomes may differ materially due to a variety of factors, including market conditions and execution considerations. Past experience is not indicative of future results. Additional information will be provided to qualified investors in formal offering materials.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="copyright-year">2025</span> Valkyrie Revival Fund. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+// Simple scroll handler using CSS variables
+window.addEventListener("scroll", function() {
+    const root = document.documentElement;
+    if (window.scrollY > 50) {
+        root.style.setProperty("--navbar-shadow", "0 2px 8px rgba(0,0,0,0.1)");
+    } else {
+        root.style.setProperty("--navbar-shadow", "none");
+    }
+});
+
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // Close menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        });
+    }
+});
+</script>
+<script>
+// Set dynamic copyright year
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElement = document.getElementById('copyright-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
+</script>
+<script>
+// Handle form submission
+document.getElementById('investorPresentationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    
+    // Send to Formspree
+    fetch('https://formspree.io/f/mblzgbyy', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            subject: 'Investor Presentation Request',
+            message: 'User requested access to the Investor Presentation PDF.'
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            // Hide form content
+            this.style.display = 'none';
+            // Show success message
+            const successMsg = document.getElementById('successMessage');
+            if (successMsg) {
+                successMsg.style.display = 'flex';
+                // Scroll to success message
+                successMsg.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                console.error('Success message element not found');
+            }
+        } else {
+            alert('There was an error submitting the form. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error submitting the form. Please try again.');
+    });
+});
+</script>
+</body>
+</html>
