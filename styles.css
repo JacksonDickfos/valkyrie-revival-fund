@@ -2776,3 +2776,61 @@ body:not(.at-top) .navbar::after {
         font-size: 1.5rem;
     }
 }
+
+/* Investor Presentation page - remove shadow line */
+.investor-presentation-page .navbar::after {
+    display: none !important;
+    opacity: 0 !important;
+}
+.investor-presentation-page .contact-form .form-card::before {
+    display: none !important;
+}
+.investor-presentation-page .success-message {
+    box-shadow: none !important;
+}
+
+/* Checkbox styling for NDA agreement */
+.form-group-checkbox {
+    margin-bottom: 1.5rem;
+}
+.checkbox-label {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-weight: 400;
+    color: var(--pp-charcoal);
+}
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin: 0.25rem 0 0 0;
+    flex-shrink: 0;
+}
+.checkbox-label a {
+    color: var(--pp-navy-blue);
+    text-decoration: underline;
+}
+.checkbox-label a:hover {
+    color: #0F1A3A;
+}
+
+/* NDA Terms and Conditions page */
+.nda-page .nda-content {
+    padding: 6rem 0 4rem;
+    background: #D6D2C4;
+}
+.nda-document {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--pp-white);
+    padding: 2.5rem;
+    border-radius: 16px;
+    color: var(--pp-charcoal);
+    line-height: 1.8;
+}
+.nda-document p {
+    margin-bottom: 1rem;
+}
+.nda-document p:last-child {
+    margin-bottom: 0;
+}
