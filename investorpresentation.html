@@ -66,12 +66,15 @@
                                 <input type="text" id="company" name="company">
                             </div>
                             <div class="form-actions">
-                                <button type="submit" class="btn-primary">Download Presentation</button>
+                                <button type="submit" class="btn-primary">Request Investor Package</button>
                             </div>
                         </form>
                         <div id="successMessage" class="success-message" style="display: none;">
                             <h3>Thank you!</h3>
-                            <p>Your request has been submitted successfully. You will receive an email with the presentation shortly.</p>
+                            <p>Your request has been submitted successfully. View the presentation below:</p>
+                        </div>
+                        <div id="pdfViewer" style="display: none; width: 100%; margin-top: 2rem;">
+                            <iframe src="pdfs/investor-presentation.pdf" style="width: 100%; height: 800px; border: 1px solid #ddd; border-radius: 8px;" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -192,16 +195,19 @@ document.getElementById('investorPresentationForm').addEventListener('submit', f
     })
     .then(response => {
         if (response.ok) {
+            alert('Thank you for your request, the Valkyrie team will be in touch with you shortly.');
             // Hide form content
             this.style.display = 'none';
             // Show success message
             const successMsg = document.getElementById('successMessage');
+            const pdfViewer = document.getElementById('pdfViewer');
             if (successMsg) {
                 successMsg.style.display = 'flex';
-                // Scroll to success message
-                successMsg.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                console.error('Success message element not found');
+            }
+            if (pdfViewer) {
+                pdfViewer.style.display = 'block';
+                // Scroll to PDF viewer
+                pdfViewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         } else {
             alert('There was an error submitting the form. Please try again.');
