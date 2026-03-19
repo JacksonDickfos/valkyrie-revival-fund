@@ -2957,14 +2957,29 @@ body:not(.at-top) .navbar::after {
 .investor-home-grid {
     grid-template-columns: repeat(3, 1fr);
 }
+/* Center the two cards on the second row (Case Studies & FAQs) */
+.investor-home-grid .investor-home-card:nth-child(4) {
+    grid-column: 2;
+}
+.investor-home-grid .investor-home-card:nth-child(5) {
+    grid-column: 3;
+}
 @media (max-width: 968px) {
     .investor-home-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .investor-home-grid .investor-home-card:nth-child(4),
+    .investor-home-grid .investor-home-card:nth-child(5) {
+        grid-column: auto;
     }
 }
 @media (max-width: 640px) {
     .investor-home-grid {
         grid-template-columns: 1fr;
+    }
+    .investor-home-grid .investor-home-card:nth-child(4),
+    .investor-home-grid .investor-home-card:nth-child(5) {
+        grid-column: auto;
     }
 }
 .investor-home-card {
