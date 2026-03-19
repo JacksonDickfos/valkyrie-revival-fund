@@ -2815,12 +2815,22 @@ body:not(.at-top) .navbar::after {
 }
 
 /* NDA Terms and Conditions page */
+.nda-page .navbar::after {
+    display: none !important;
+    opacity: 0 !important;
+    content: none !important;
+    height: 0 !important;
+    background: none !important;
+}
+.nda-page .footer {
+    margin-top: 0 !important;
+}
 .nda-page .nda-content {
-    padding: 6rem 0 8rem;
+    padding: 6rem 0 6rem;
     background: #D6D2C4;
 }
 .nda-page .nda-document {
-    padding-bottom: 4rem;
+    padding-bottom: 6rem;
 }
 .nda-document {
     max-width: 800px;
@@ -2868,7 +2878,7 @@ body:not(.at-top) .navbar::after {
 }
 .nda-document .nda-acknowledgment {
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     font-size: 0.95rem;
 }
 
