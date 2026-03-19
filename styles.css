@@ -2960,3 +2960,70 @@ body:not(.at-top) .navbar::after {
 .investor-home-card .card-preview {
     display: none;
 }
+
+/* Data Room Section - below main bubbles */
+.data-room-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+.data-room-access-btn {
+    margin-bottom: 2rem;
+}
+.data-room-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Data Room Modal - same form as Get In Touch */
+.data-room-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+}
+.data-room-modal.active {
+    display: flex;
+}
+.data-room-modal-content {
+    background-color: var(--pp-white);
+    margin: auto;
+    padding: 3rem;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+.data-room-modal-content .section-header {
+    margin-bottom: 1.5rem;
+}
+.data-room-modal-content .section-header h2 {
+    color: var(--pp-navy-blue);
+    font-size: 1.5rem;
+}
+.data-room-modal-content .contact-form .btn-primary {
+    width: 100%;
+    height: 48px;
+}
+.data-room-modal-content .success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}

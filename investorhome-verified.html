@@ -63,13 +63,13 @@
                     <div class="investor-icon-badge">
                         <i class="fas fa-building"></i>
                     </div>
-                    <h3>SPV Deck</h3>
+                    <h3>Special Purpose Vehicle Option</h3>
                 </a>
                 <a href="appendix.html" class="investor-card investor-home-card">
                     <div class="investor-icon-badge">
                         <i class="fas fa-book"></i>
                     </div>
-                    <h3>Appendix</h3>
+                    <h3>Case Studies & Track Record</h3>
                 </a>
                 <a href="faqs.html" class="investor-card investor-home-card">
                     <div class="investor-icon-badge">
@@ -77,21 +77,77 @@
                     </div>
                     <h3>FAQs</h3>
                 </a>
-                <a href="data-room-phase-1.html" class="investor-card investor-home-card">
-                    <div class="investor-icon-badge">
-                        <i class="fas fa-folder-open"></i>
-                    </div>
-                    <h3>Data Room - Phase 1</h3>
-                </a>
-                <a href="data-room-phase-2.html" class="investor-card investor-home-card">
-                    <div class="investor-icon-badge">
-                        <i class="fas fa-folder-open"></i>
-                    </div>
-                    <h3>Data Room - Phase 2</h3>
-                </a>
+            </div>
+
+            <!-- Data Room Section -->
+            <div class="data-room-section">
+                <button type="button" class="btn-primary data-room-access-btn" id="requestDataRoomBtn">Request Access to Data Room</button>
+                <div class="data-room-cards">
+                    <a href="data-room-phase-1.html" class="investor-card investor-home-card">
+                        <div class="investor-icon-badge">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <h3>Data Room - Phase 1</h3>
+                    </a>
+                    <a href="data-room-phase-2.html" class="investor-card investor-home-card">
+                        <div class="investor-icon-badge">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <h3>Data Room - Phase 2</h3>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Data Room Request Modal -->
+    <div id="dataRoomModal" class="data-room-modal">
+        <div class="data-room-modal-content">
+            <button type="button" class="modal-close" id="dataRoomModalClose" aria-label="Close">&times;</button>
+            <div class="section-header">
+                <h2>Request Access to Data Room</h2>
+                <p>Fill out the form below to request access to our data room materials.</p>
+            </div>
+            <div class="contact-form">
+                <div class="form-card">
+                    <form id="dataRoomContactForm">
+                        <div class="form-group">
+                            <label for="dataRoomEmail">Email Address *</label>
+                            <input type="email" id="dataRoomEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dataRoomPhone">Phone Number</label>
+                            <input type="tel" id="dataRoomPhone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="dataRoomAvailableCapital">Available Capital</label>
+                            <input type="text" id="dataRoomAvailableCapital" name="availableCapital" inputmode="numeric" pattern="[0-9,]*" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="dataRoomInvestorType">Type of Investor</label>
+                            <select id="dataRoomInvestorType" name="investorType">
+                                <option value="">Select an option</option>
+                                <option value="Angel Investor">Angel Investor</option>
+                                <option value="High net-worth individual">High net-worth individual</option>
+                                <option value="Family Office">Family Office</option>
+                                <option value="Venture Capital">Venture Capital</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dataRoomMessage">Message *</label>
+                            <textarea id="dataRoomMessage" name="message" rows="5" required placeholder="Request access to the data room"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                    <div id="dataRoomSuccessMessage" class="success-message" style="display: none;">
+                        <h3>Thanks!</h3>
+                        <p>The form was submitted successfully.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -172,6 +228,104 @@ document.addEventListener('DOMContentLoaded', function() {
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
+});
+
+// Data Room Modal
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('dataRoomModal');
+    const openBtn = document.getElementById('requestDataRoomBtn');
+    const closeBtn = document.getElementById('dataRoomModalClose');
+
+    if (openBtn && modal) {
+        openBtn.addEventListener('click', function() {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    if (closeBtn && modal) {
+        closeBtn.addEventListener('click', function() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+});
+
+// Available Capital formatting for Data Room form
+function formatNumberWithCommas(value) {
+    const numericValue = String(value).replace(/\D/g, '');
+    return numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+function parseFormattedNumber(value) {
+    return parseInt(String(value).replace(/,/g, '')) || 0;
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('dataRoomAvailableCapital');
+    if (input) {
+        input.addEventListener('input', function() {
+            const cursorPosition = this.selectionStart;
+            const oldValue = this.value;
+            const newValue = formatNumberWithCommas(oldValue);
+            this.value = newValue;
+            const addedCommas = (newValue.match(/,/g) || []).length - (oldValue.match(/,/g) || []).length;
+            this.setSelectionRange(cursorPosition + addedCommas, cursorPosition + addedCommas);
+        });
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                const currentValue = parseFormattedNumber(this.value);
+                const increment = 500000;
+                const newValue = e.key === 'ArrowUp' ? currentValue + increment : Math.max(0, currentValue - increment);
+                this.value = formatNumberWithCommas(newValue.toString());
+            }
+        });
+    }
+});
+
+// Data Room form submission
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('dataRoomContactForm');
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const email = formData.get('email');
+        const phone = formData.get('phone');
+        const availableCapitalInput = document.getElementById('dataRoomAvailableCapital');
+        const availableCapital = availableCapitalInput ? parseFormattedNumber(availableCapitalInput.value).toString() : '';
+        const investorType = formData.get('investorType');
+        const message = formData.get('message');
+        fetch('https://formspree.io/f/mblzgbyy', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, name: '', phone, availableCapital, investorType, message })
+        })
+        .then(function(response) {
+            if (response.ok) {
+                form.style.display = 'none';
+                const successMsg = document.getElementById('dataRoomSuccessMessage');
+                if (successMsg) successMsg.style.display = 'flex';
+            } else {
+                alert('There was an error submitting the form. Please try again.');
+            }
+        })
+        .catch(function() {
+            alert('There was an error submitting the form. Please try again.');
+        });
+    });
 });
 </script>
 </body>
