@@ -3,13 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investor Presentation - Valkyrie Revival Fund</title>
+    <title>Investor Home - Valkyrie Revival Fund</title>
     <link rel="icon" type="image/png" href="images/back-helmet.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="investor-presentation-page">
+    <!-- NDA/Form Modal - blocks page until form submitted -->
+    <div id="investorFormModal" class="investor-form-modal active">
+        <div class="investor-form-modal-content">
+            <div class="section-header">
+                <h2>Valkyrie Revival Fund — Investor Presentation</h2>
+                <p>This presentation is available to prospective investors.<br>Please provide your details to access the material.</p>
+            </div>
+            <div class="contact-form">
+                <div class="form-card">
+                    <form id="investorPresentationForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group form-group-checkbox">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="ndaAgree" name="ndaAgree" required>
+                                <span>By checking this box, I agree to be bound by the <a href="NDA-terms-and-conditions.html" target="_blank" rel="noopener noreferrer">terms of the Non-Disclosure Agreement (NDA)</a> and acknowledge that all materials accessed are confidential and may be used solely for evaluating a potential investment in the Valkyrie Revival Fund.</span>
+                            </label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary" id="requestBtn" disabled>Request Investor Package</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -39,48 +76,56 @@
         </div>
     </nav>
 
-    <!-- Investor Presentation Section -->
-    <section id="investor-presentation" class="contact">
+    <!-- Investor Home - 7 bubbles (visible after form submission) -->
+    <section id="investor-home" class="investors investor-home-section">
         <div class="container">
             <div class="section-header">
-                <h2>Valkyrie Revival Fund — Investor Presentation</h2>
-                <p>This presentation is available to prospective investors.<br>Please provide your details to access the material.</p>
+                <h2>Investor Home</h2>
+                <p>Access the materials below.</p>
             </div>
-            <div class="presentation-image" style="text-align: center; margin: 2rem 0 3rem 0;">
-                <img src="images/deckimage.png" alt="Investor Presentation" style="max-width: 60%; height: auto; border-radius: 8px;">
-            </div>
-            <div class="contact-content">
-                <div class="contact-form">
-                    <div class="form-card">
-                        <form id="investorPresentationForm">
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Company</label>
-                                <input type="text" id="company" name="company">
-                            </div>
-                            <div class="form-group form-group-checkbox">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="ndaAgree" name="ndaAgree" required>
-                                    <span>By checking this box, I agree to be bound by the <a href="NDA-terms-and-conditions.html" target="_blank" rel="noopener noreferrer">terms of the Non-Disclosure Agreement (NDA)</a> and acknowledge that all materials accessed are confidential and may be used solely for evaluating a potential investment in the Valkyrie Revival Fund.</span>
-                                </label>
-                            </div>
-                            <div class="form-actions">
-                                <button type="submit" class="btn-primary" id="requestBtn" disabled>Request Investor Package</button>
-                            </div>
-                        </form>
-                        <div id="successMessage" class="success-message" style="display: none;">
-                            <h3>Thank you!</h3>
-                            <p>Thank you for your request, the Valkyrie team will be in touch with you shortly.</p>
-                        </div>
+            <div class="investors-grid investor-home-grid">
+                <a href="1-pager.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-file-alt"></i>
                     </div>
-                </div>
+                    <h3>1-pager</h3>
+                </a>
+                <a href="presentation-deck.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <h3>Presentation Deck</h3>
+                </a>
+                <a href="spv-deck.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>SPV Deck</h3>
+                </a>
+                <a href="appendix.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Appendix</h3>
+                </a>
+                <a href="faqs.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>FAQs</h3>
+                </a>
+                <a href="data-room-phase-1.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3>Data Room - Phase 1</h3>
+                </a>
+                <a href="data-room-phase-2.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3>Data Room - Phase 2</h3>
+                </a>
             </div>
         </div>
     </section>
@@ -142,7 +187,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.toggle('menu-open');
         });
         
-        // Close menu when clicking on a link
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', function() {
@@ -152,7 +196,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
                 hamburger.classList.remove('active');
@@ -162,8 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-</script>
-<script>
+
 // Set dynamic copyright year
 document.addEventListener('DOMContentLoaded', function() {
     const yearElement = document.getElementById('copyright-year');
@@ -182,41 +224,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-</script>
-<script>
+
+// Check if user has already completed form (sessionStorage)
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('investorFormModal');
+    const investorHome = document.getElementById('investor-home');
+    
+    if (sessionStorage.getItem('investorFormSubmitted') === 'true') {
+        if (modal) modal.classList.remove('active');
+        if (investorHome) investorHome.classList.add('visible');
+    } else {
+        if (investorHome) investorHome.classList.remove('visible');
+    }
+});
+
 // Handle form submission
 document.getElementById('investorPresentationForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Get form data
     const formData = new FormData(this);
-    const name = formData.get('name');
-    const email = formData.get('email');
     
-    // Send to Formspree
     fetch('https://formspree.io/f/mblzgbyy', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            name: name,
-            email: email,
+            name: formData.get('name'),
+            email: formData.get('email'),
             company: formData.get('company'),
             subject: 'Investor Presentation Request',
-            message: 'User requested access to the Investor Presentation PDF.'
+            message: 'User requested access to the Investor materials.'
         })
     })
     .then(response => {
         if (response.ok) {
-            // Hide form content
-            this.style.display = 'none';
-            // Show success message on page
-            const successMsg = document.getElementById('successMessage');
-            if (successMsg) {
-                successMsg.style.display = 'flex';
-                successMsg.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+            sessionStorage.setItem('investorFormSubmitted', 'true');
+            const modal = document.getElementById('investorFormModal');
+            const investorHome = document.getElementById('investor-home');
+            if (modal) modal.classList.remove('active');
+            if (investorHome) investorHome.classList.add('visible');
         } else {
             alert('There was an error submitting the form. Please try again.');
         }
