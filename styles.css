@@ -2816,8 +2816,11 @@ body:not(.at-top) .navbar::after {
 
 /* NDA Terms and Conditions page */
 .nda-page .nda-content {
-    padding: 6rem 0 4rem;
+    padding: 6rem 0 8rem;
     background: #D6D2C4;
+}
+.nda-page .nda-document {
+    padding-bottom: 4rem;
 }
 .nda-document {
     max-width: 800px;
@@ -2865,6 +2868,7 @@ body:not(.at-top) .navbar::after {
 }
 .nda-document .nda-acknowledgment {
     margin-top: 2rem;
+    margin-bottom: 2rem;
     font-size: 0.95rem;
 }
 
