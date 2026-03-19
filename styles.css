@@ -2829,21 +2829,29 @@ body:not(.at-top) .navbar::after {
     padding: 6rem 0 6rem;
     background: #D6D2C4;
 }
+.nda-page .container {
+    max-width: 1400px;
+}
 .nda-page .nda-document {
     padding-bottom: 6rem;
+}
+/* PDF document pages: wider container for better visibility */
+.nda-document:has(.pdf-viewer) {
+    max-width: min(1400px, 95vw);
+    padding: 1.5rem;
 }
 .pdf-viewer {
     margin-top: 1.5rem;
     width: 100%;
-    min-height: 600px;
+    min-height: 700px;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid rgba(192, 192, 192, 0.3);
 }
 .pdf-viewer iframe {
     width: 100%;
-    height: 75vh;
-    min-height: 600px;
+    height: 90vh;
+    min-height: 700px;
     border: none;
 }
 .nda-document {
