@@ -10,43 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="investor-presentation-page">
-    <!-- NDA/Form Modal - blocks page until form submitted -->
-    <div id="investorFormModal" class="investor-form-modal active">
-        <div class="investor-form-modal-content">
-            <div class="section-header">
-                <h2>Valkyrie Revival Fund — Investor Home</h2>
-                <p>This page is exclusive to prospective investors.<br>Please provide your details to access the material.</p>
-            </div>
-            <div class="contact-form">
-                <div class="form-card">
-                    <form id="investorPresentationForm">
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        <div class="form-group form-group-checkbox">
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="ndaAgree" name="ndaAgree" required>
-                                <span>By checking this box, I agree to be bound by the <a href="NDA-terms-and-conditions.html" target="_blank" rel="noopener noreferrer">terms of the Non-Disclosure Agreement (NDA)</a> and acknowledge that all materials accessed are confidential and may be used solely for evaluating a potential investment in the Valkyrie Revival Fund.</span>
-                            </label>
-                        </div>
-                        <div class="form-actions">
-                            <button type="submit" class="btn-primary" id="requestBtn" disabled>View 'Investor Home'</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -75,6 +38,60 @@
             </div>
         </div>
     </nav>
+
+    <!-- Investor Home - 7 bubbles -->
+    <section id="investor-home" class="investors investor-home-section visible">
+        <div class="container">
+            <div class="section-header">
+                <h2>Investor Home</h2>
+                <p>Access the materials below.</p>
+            </div>
+            <div class="investors-grid investor-home-grid">
+                <a href="1-pager.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>1-pager</h3>
+                </a>
+                <a href="presentation-deck.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <h3>Presentation Deck</h3>
+                </a>
+                <a href="spv-deck.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>SPV Deck</h3>
+                </a>
+                <a href="appendix.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Appendix</h3>
+                </a>
+                <a href="faqs.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>FAQs</h3>
+                </a>
+                <a href="data-room-phase-1.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3>Data Room - Phase 1</h3>
+                </a>
+                <a href="data-room-phase-2.html" class="investor-card investor-home-card">
+                    <div class="investor-icon-badge">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3>Data Room - Phase 2</h3>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -111,7 +128,6 @@
     </footer>
 
 <script>
-// Simple scroll handler using CSS variables
 window.addEventListener("scroll", function() {
     const root = document.documentElement;
     if (window.scrollY > 50) {
@@ -121,7 +137,6 @@ window.addEventListener("scroll", function() {
     }
 });
 
-// Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -152,55 +167,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Set dynamic copyright year
 document.addEventListener('DOMContentLoaded', function() {
     const yearElement = document.getElementById('copyright-year');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
-});
-
-// Enable Request button only when NDA checkbox is checked
-document.addEventListener('DOMContentLoaded', function() {
-    const checkbox = document.getElementById('ndaAgree');
-    const btn = document.getElementById('requestBtn');
-    if (checkbox && btn) {
-        checkbox.addEventListener('change', function() {
-            btn.disabled = !this.checked;
-        });
-    }
-});
-
-// Handle form submission
-document.getElementById('investorPresentationForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(this);
-    
-    fetch('https://formspree.io/f/mblzgbyy', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            name: formData.get('name'),
-            email: formData.get('email'),
-            company: formData.get('company'),
-            subject: 'Investor Presentation Request',
-            message: 'User requested access to the Investor materials.'
-        })
-    })
-    .then(response => {
-        if (response.ok) {
-            window.location.href = 'investorhome-verified.html';
-        } else {
-            alert('There was an error submitting the form. Please try again.');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error submitting the form. Please try again.');
-    });
 });
 </script>
 </body>
