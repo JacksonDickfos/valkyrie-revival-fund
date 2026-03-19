@@ -2922,9 +2922,15 @@ body:not(.at-top) .navbar::after {
 }
 
 /* Investor Home section - hidden until form submitted */
+.investor-home-verified-page .footer {
+    margin-top: 0 !important;
+}
 .investor-home-section {
     display: none;
     padding: 6rem 0 8rem;
+}
+.investor-home-verified-page .investor-home-section {
+    padding: 6rem 0 10rem;
 }
 .investor-home-section.visible {
     display: block;
