@@ -2835,6 +2835,39 @@ body:not(.at-top) .navbar::after {
     margin-bottom: 0;
 }
 
+.nda-document .nda-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    color: var(--pp-charcoal);
+}
+.nda-document h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--pp-charcoal);
+}
+.nda-document h3:first-of-type {
+    margin-top: 0;
+}
+.nda-document ul {
+    margin: 0.75rem 0 1rem 1.5rem;
+    padding: 0;
+}
+.nda-document li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+.nda-document .nda-acknowledgment {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+}
+
 /* Investor Form Modal - blocks page until form submitted */
 .investor-form-modal {
     position: fixed;
