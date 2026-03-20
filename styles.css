@@ -3019,6 +3019,11 @@ body:not(.at-top) .navbar::after {
     margin-top: 4rem;
     text-align: center;
 }
+.data-room-intro {
+    margin: 0 0 1rem;
+    color: var(--pp-charcoal);
+    font-size: 1rem;
+}
 .data-room-access-btn {
     margin-bottom: 2rem;
 }
