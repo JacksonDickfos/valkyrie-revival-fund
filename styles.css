@@ -3021,8 +3021,9 @@ body:not(.at-top) .navbar::after {
 }
 .data-room-intro {
     margin: 0 0 1rem;
+    font-size: 1.2rem;
     color: var(--pp-charcoal);
-    font-size: 1rem;
+    font-family: inherit;
 }
 .data-room-access-btn {
     margin-bottom: 2rem;
