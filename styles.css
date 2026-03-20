@@ -3020,7 +3020,7 @@ body:not(.at-top) .navbar::after {
     text-align: center;
 }
 .data-room-intro {
-    margin: 0 0 1rem;
+    margin: 0 0 3rem;
     font-size: 1.2rem;
     color: var(--pp-charcoal);
     font-family: inherit;
