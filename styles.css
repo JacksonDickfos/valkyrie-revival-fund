@@ -3030,7 +3030,8 @@ body:not(.at-top) .navbar::after {
 }
 .investor-home-disclaimer {
     margin-top: 3rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-style: italic;
     color: var(--pp-charcoal);
     line-height: 1.6;
     max-width: 700px;
