@@ -3115,3 +3115,31 @@ body:not(.at-top) .navbar::after {
     padding: 2rem;
     text-align: center;
 }
+
+/* Sizzle reel page */
+.sizzle-reel-page .footer {
+    margin-top: 0 !important;
+}
+.sizzle-reel-main {
+    min-height: calc(100vh - 12rem);
+    padding: 4rem 0 6rem;
+    background: #E4E2DA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sizzle-reel-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sizzle-reel-video {
+    width: 100%;
+    max-width: min(960px, 100%);
+    height: auto;
+    max-height: 75vh;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    background: #000;
+}
