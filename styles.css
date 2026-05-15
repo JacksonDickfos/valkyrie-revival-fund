@@ -3153,7 +3153,7 @@ body:not(.at-top) .navbar::after {
 }
 .sizzle-sound-btn {
     position: absolute;
-    bottom: calc(3rem + 5px);
+    bottom: calc(3rem + 10px);
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -3182,7 +3182,7 @@ body:not(.at-top) .navbar::after {
 }
 @media (max-width: 640px) {
     .sizzle-sound-btn {
-        bottom: calc(4.5rem + 5px);
+        bottom: calc(4.5rem + 10px);
         font-size: 0.9rem;
         padding: 0.55rem 1rem;
     }
