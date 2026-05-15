@@ -3117,13 +3117,16 @@ body:not(.at-top) .navbar::after {
 }
 
 /* Sizzle reel page */
+.sizzle-reel-page {
+    background: #2F3235;
+}
 .sizzle-reel-page .footer {
     margin-top: 0 !important;
 }
 .sizzle-reel-main {
     min-height: calc(100vh - 12rem);
     padding: 4rem 0 6rem;
-    background: #E4E2DA;
+    background: #2F3235;
     display: flex;
     align-items: center;
     justify-content: center;
