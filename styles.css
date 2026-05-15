@@ -3137,12 +3137,53 @@ body:not(.at-top) .navbar::after {
     justify-content: center;
     align-items: center;
 }
-.sizzle-reel-video {
+.sizzle-reel-wrap {
+    position: relative;
     width: 100%;
     max-width: min(960px, 100%);
+}
+.sizzle-reel-video {
+    width: 100%;
+    max-width: none;
     height: auto;
     max-height: 75vh;
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     background: #000;
+}
+.sizzle-sound-btn {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--pp-white);
+    background: var(--pp-navy-blue);
+    box-shadow: 0 4px 15px rgba(27, 41, 81, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.sizzle-sound-btn:hover {
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(27, 41, 81, 0.6);
+    color: var(--pp-white);
+}
+.sizzle-sound-btn[hidden] {
+    display: none;
+}
+@media (max-width: 640px) {
+    .sizzle-sound-btn {
+        bottom: 4.5rem;
+        font-size: 0.9rem;
+        padding: 0.55rem 1rem;
+    }
 }

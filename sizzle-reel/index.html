@@ -40,10 +40,16 @@
 
     <main class="sizzle-reel-main">
         <div class="container sizzle-reel-container">
-            <video id="sizzleVideo" class="sizzle-reel-video" controls autoplay playsinline preload="auto">
-                <source src="../images/sizzle.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="sizzle-reel-wrap">
+                <video id="sizzleVideo" class="sizzle-reel-video" muted controls autoplay playsinline preload="auto">
+                    <source src="../images/sizzle.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button type="button" class="sizzle-sound-btn" id="sizzleSoundBtn" aria-label="Unmute video and enable sound">
+                    <i class="fas fa-volume-up" aria-hidden="true"></i>
+                    <span>Tap for sound</span>
+                </button>
+            </div>
         </div>
     </main>
 
@@ -92,13 +98,21 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         var video = document.getElementById('sizzleVideo');
-        if (video) {
-            video.volume = 1;
-            video.muted = false;
-            var attempt = video.play();
-            if (attempt && typeof attempt.catch === 'function') {
-                attempt.catch(function() {});
+        var soundBtn = document.getElementById('sizzleSoundBtn');
+        if (video && soundBtn) {
+            function hideSoundButton() {
+                soundBtn.hidden = true;
+                soundBtn.setAttribute('aria-hidden', 'true');
             }
+            soundBtn.addEventListener('click', function() {
+                video.muted = false;
+                video.volume = 1;
+                hideSoundButton();
+                video.play().catch(function() {});
+            });
+            video.addEventListener('volumechange', function() {
+                if (!video.muted) hideSoundButton();
+            });
         }
 
         const hamburger = document.querySelector('.hamburger');
