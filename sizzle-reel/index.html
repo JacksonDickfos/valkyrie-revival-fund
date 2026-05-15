@@ -40,7 +40,7 @@
 
     <main class="sizzle-reel-main">
         <div class="container sizzle-reel-container">
-            <video class="sizzle-reel-video" controls playsinline preload="metadata">
+            <video id="sizzleVideo" class="sizzle-reel-video" controls autoplay playsinline preload="auto">
                 <source src="../images/sizzle.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -91,6 +91,16 @@
     });
 
     document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('sizzleVideo');
+        if (video) {
+            video.volume = 1;
+            video.muted = false;
+            var attempt = video.play();
+            if (attempt && typeof attempt.catch === 'function') {
+                attempt.catch(function() {});
+            }
+        }
+
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
         if (hamburger && mobileMenu) {
