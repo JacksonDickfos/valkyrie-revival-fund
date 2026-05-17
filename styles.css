@@ -2570,12 +2570,6 @@ body:not(.at-top) .navbar::after {
 .team .team-grid .team-card .team-role {
     display: none;
 }
-
-/* Bios hidden on compact cards only; full text cloned into modal on click */
-.team .team-grid .team-card .team-description-container {
-    display: none;
-}
-
 .team .team-grid .team-card .team-title {
     margin-bottom: 1rem;
 }
@@ -2584,7 +2578,15 @@ body:not(.at-top) .navbar::after {
     font-size: 0.95rem;
     color: var(--pp-charcoal);
     line-height: 1.6;
-    text-align: center;
+    text-align: center; /* center the 2-line preview text on each card */
+}
+
+.team-description-container {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .team-card[data-member] {
