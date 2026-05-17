@@ -2555,6 +2555,14 @@ body:not(.at-top) .navbar::after {
     font-style: italic;
 }
 
+/* Subline/tagline hidden on compact cards only; modal still reads text via JS */
+.team .team-grid .team-card .team-role {
+    display: none;
+}
+.team .team-grid .team-card .team-title {
+    margin-bottom: 1rem;
+}
+
 .team-description {
     font-size: 0.95rem;
     color: var(--pp-charcoal);
