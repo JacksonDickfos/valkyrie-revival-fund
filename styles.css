@@ -2097,6 +2097,17 @@ body:not(.at-top) .navbar::after {
     background: none !important;
 }
 
+/* Match navbar bar to team profile card surface (team + team-full only: body.team-page) */
+.team-page .navbar {
+    background: #FAFAFA;
+}
+
+@media (max-width: 768px) {
+    .team-page .navbar {
+        background: #FAFAFA !important;
+    }
+}
+
 
 /* CSS Variables for navbar shadow */
 :root {
