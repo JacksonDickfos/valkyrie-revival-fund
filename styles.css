@@ -2578,12 +2578,12 @@ body:not(.at-top) .navbar::after {
     font-size: 0.95rem;
     color: var(--pp-charcoal);
     line-height: 1.6;
-    text-align: center; /* center the 3-line preview text on each card */
+    text-align: center; /* center the 2-line preview text on each card */
 }
 
 .team-description-container {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
