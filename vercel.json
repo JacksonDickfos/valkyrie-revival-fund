@@ -1,7 +1,12 @@
 {
   "version": 2,
   "name": "valkyrie-revival-fund",
-  "public": true
+  "public": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://prytaneumpartners.com/:path*",
+      "permanent": true
+    }
+  ]
 }
-
-
